@@ -129,12 +129,12 @@ define set_vars
 endef
 
 # Repos and versions
-FUELLIB_COMMIT?=stable/5.1
+FUELLIB_COMMIT?=dev/5.1
 NAILGUN_COMMIT?=stable/5.1
 ASTUTE_COMMIT?=stable/5.1
 OSTF_COMMIT?=stable/5.1
 
-FUELLIB_REPO?=https://github.com/stackforge/fuel-library.git
+FUELLIB_REPO?=https://github.com/dancn/fuel-library-dev.git
 NAILGUN_REPO?=https://github.com/stackforge/fuel-web.git
 ASTUTE_REPO?=https://github.com/stackforge/fuel-astute.git
 OSTF_REPO?=https://github.com/stackforge/fuel-ostf.git
