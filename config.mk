@@ -131,8 +131,8 @@ endef
 # Repos and versions
 FUELLIB_COMMIT?=si/2.0
 NAILGUN_COMMIT?=si/2.0
-ASTUTE_COMMIT?=master
-OSTF_COMMIT?=master
+ASTUTE_COMMIT?=stable/5.1
+OSTF_COMMIT?=stable/5.1
 
 FUELLIB_REPO?=https://github.com/SmartInfrastructures/fuel-library-dev.git
 NAILGUN_REPO?=https://github.com/SmartInfrastructures/fuel-web-dev.git
@@ -232,7 +232,7 @@ EXTRA_DEB_REPOS?=
 # Comma or space separated list. Available feature groups:
 #   experimental - allow experimental options
 #   mirantis - enable Mirantis logos and support page
-FEATURE_GROUPS?=experimental
+FEATURE_GROUPS?=experimental,fiware
 comma:=,
 FEATURE_GROUPS:=$(subst $(comma), ,$(FEATURE_GROUPS))
 

@@ -1,10 +1,12 @@
 #!/bin/bash
+echo deb http://archive.ubuntu.com/ubuntu precise main >> /etc/apt/sources.list.d/ubuntu.list
 apt-get update
-
+apt-get install -y python-software-properties python g++ make
+add-apt-repository -y ppa:chris-lea/node.js
+apt-get update
 #for pkg in $(cat /requirements-deb.txt | grep -Ev "^#"); do
 #	apt-get -dy install $pkg || exit 1
 #done
-
 
 mkdir -p /repo/download/
 
