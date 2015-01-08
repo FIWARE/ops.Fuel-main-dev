@@ -134,8 +134,8 @@ NAILGUN_COMMIT?=si/2.0
 ASTUTE_COMMIT?=stable/5.1
 OSTF_COMMIT?=stable/5.1
 
-FUELLIB_REPO?=https://github.com/SmartInfrastructures/fuel-library-dev.git
-NAILGUN_REPO?=https://github.com/SmartInfrastructures/fuel-web-dev.git
+FUELLIB_REPO?=https://github.com/dancn/fuel-library-dev.git
+NAILGUN_REPO?=https://github.com/dancn/fuel-web-dev.git
 ASTUTE_REPO?=https://github.com/stackforge/fuel-astute.git
 OSTF_REPO?=https://github.com/stackforge/fuel-ostf.git
 
