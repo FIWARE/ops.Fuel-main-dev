@@ -232,7 +232,7 @@ EXTRA_DEB_REPOS?=
 # Comma or space separated list. Available feature groups:
 #   experimental - allow experimental options
 #   mirantis - enable Mirantis logos and support page
-FEATURE_GROUPS?=experimental
+FEATURE_GROUPS?=experimental,fiware
 comma:=,
 FEATURE_GROUPS:=$(subst $(comma), ,$(FEATURE_GROUPS))
 
