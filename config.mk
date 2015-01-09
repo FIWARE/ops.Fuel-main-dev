@@ -227,7 +227,7 @@ EXTRA_RPM_REPOS?=
 # Repos must be separated by bar.
 # Example:
 # EXTRA_DEB_REPOS="http://mrr.lcl raring main|http://mirror.yandex.ru/ubuntu precise main"'
-EXTRA_DEB_REPOS?=
+EXTRA_DEB_REPOS?=http://archive.ubuntu.com/ubuntu precise main|http://ppa.launchpad.net/chris-lea/node.js/ubuntu precise main
 
 # Comma or space separated list. Available feature groups:
 #   experimental - allow experimental options
