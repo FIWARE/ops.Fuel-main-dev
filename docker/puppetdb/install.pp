@@ -7,7 +7,7 @@ class { 'puppetdb':
   # open_listen_port => true,  # This will require iptables, maybe we can skip it
   # open_ssl_listen_port => true,  # This will require iptables, maybe we can skip it
   puppetdb_service_status => 'stopped',
-  ssl_listen_address => 'master.domain.tld',
+  ssl_listen_address => 'fuel.domain.tld',
   ssl_listen_port =>  '58443'
 }
 
@@ -45,14 +45,14 @@ file { '/etc/ssl/nginx':
     mode => 600,
     owner => 'root',
     } ->
-    openssl::certificate::x509 { $fqdn:
+    openssl::certificate::x509 { 'fuel.domain.tld':
       ensure => present,
       country => 'IT',
       organization => 'Create-Net',
       unit => 'SmartI',
       state => 'Trentino',
       locality => 'Trento',
-      commonname => $fqdn,
+      commonname => 'fuel.domain.tld',
       email => 'daniele.pizzolli@create-net.org',
       days => 3660,
       base_dir => '/etc/ssl/nginx',
@@ -60,21 +60,21 @@ file { '/etc/ssl/nginx':
       owner => $nginx::params::nx_daemon_user,
       } ->
       nginx::resource::upstream { 'puppetdbhost':
-        ensure => present,          
+        ensure => present,
         members => [
                     'localhost:58080'
                     ],
         } ->
-        nginx::resource::vhost { 'master.domain.tld':
-          ensure => present,  
+        nginx::resource::vhost { 'fuel.domain.tld':
+          ensure => present,
           # ssl_only => true,
           listen_port => '58443',
           proxy => 'http://puppetdbhost',
           ssl => true,
           # ssl_cert => '/var/lib/puppet/ssl/certs/example.com.pem',
           # ssl_key => '/var/lib/puppet/ssl/private_keys/example.com.pem',
-          ssl_cert => "/etc/ssl/nginx/${fqdn}.crt",
-          ssl_key => "/etc/ssl/nginx/${fqdn}.key",  
+          ssl_cert => '/etc/ssl/nginx/fuel.domain.tld.crt',
+          ssl_key => '/etc/ssl/nginx/fuel.domain.tld.key',
           ssl_port => '58443'
         }
         # ->
