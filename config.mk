@@ -19,7 +19,7 @@ LOCAL_MIRROR:=$(abspath $(LOCAL_MIRROR))
 DEPS_DIR?=$(TOP_DIR)/deps
 DEPS_DIR:=$(abspath $(DEPS_DIR))
 
-PRODUCT_VERSION:=5.1.1
+PRODUCT_VERSION:=5.1.2
 # This variable is used mostly for
 # keeping things uniform. Some files
 # contain versions as a part of their paths
@@ -129,13 +129,13 @@ define set_vars
 endef
 
 # Repos and versions
-FUELLIB_COMMIT?=si/2.0
-NAILGUN_COMMIT?=si/2.0
+FUELLIB_COMMIT?=stable/5.1
+NAILGUN_COMMIT?=stable/5.1
 ASTUTE_COMMIT?=stable/5.1
 OSTF_COMMIT?=stable/5.1
 
-FUELLIB_REPO?=https://github.com/dancn/fuel-library-dev.git
-NAILGUN_REPO?=https://github.com/dancn/fuel-web-dev.git
+FUELLIB_REPO?=https://github.com/stackforge/fuel-library.git
+NAILGUN_REPO?=https://github.com/stackforge/fuel-web.git
 ASTUTE_REPO?=https://github.com/stackforge/fuel-astute.git
 OSTF_REPO?=https://github.com/stackforge/fuel-ostf.git
 
@@ -227,12 +227,12 @@ EXTRA_RPM_REPOS?=
 # Repos must be separated by bar.
 # Example:
 # EXTRA_DEB_REPOS="http://mrr.lcl raring main|http://mirror.yandex.ru/ubuntu precise main"'
-EXTRA_DEB_REPOS?=http://archive.ubuntu.com/ubuntu precise main|http://ppa.launchpad.net/chris-lea/node.js/ubuntu precise main
+EXTRA_DEB_REPOS?=
 
 # Comma or space separated list. Available feature groups:
 #   experimental - allow experimental options
 #   mirantis - enable Mirantis logos and support page
-FEATURE_GROUPS?=experimental,fiware
+FEATURE_GROUPS?=experimental
 comma:=,
 FEATURE_GROUPS:=$(subst $(comma), ,$(FEATURE_GROUPS))
 
