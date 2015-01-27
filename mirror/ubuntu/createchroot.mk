@@ -1,3 +1,44 @@
+
+APT_CONF_TEMPLATES := apt-ftparchive-deb.conf apt-ftparchive-udeb.conf apt-ftparchive-release.conf Release-amd64
+empty_line:=
+define insert_ubuntu_version
+	sed -i $(LOCAL_MIRROR_UBUNTU_OS_BASEURL)/chroot/repo/$(1) \
+		-e 's|@@UBUNTU_RELEASE@@|$(UBUNTU_RELEASE)|g' \
+		-e 's|@@UBUNTU_RELEASE_NUMBER@@|$(UBUNTU_RELEASE_NUMBER)|g'
+	$(empty_line)
+endef
+
+ifeq (,$(findstring clean,$(MAKECMDGOALS)))
+include $(BUILD_DIR)/ubuntu_installer_kernel_version.mk
+endif
+
+define newline
+
+
+endef
+# there are two blank lines here, this is not an error
+
+define apt_sources_list
+$(if $(subst none,,$(USE_MIRROR)),
+deb $(MIRROR_UBUNTU) $(UBUNTU_RELEASE) main,
+deb $(MIRROR_UBUNTU) $(UBUNTU_RELEASE) main universe multiverse restricted
+deb $(MIRROR_UBUNTU) $(UBUNTU_RELEASE)-updates main universe multiverse restricted
+deb $(MIRROR_UBUNTU) $(UBUNTU_RELEASE)-security main universe multiverse restricted
+deb $(MIRROR_UBUNTU_SECURITY) $(UBUNTU_RELEASE)-security main universe multiverse restricted
+deb $(MIRROR_FUEL_UBUNTU) $(UBUNTU_RELEASE) main
+)
+$(if $(EXTRA_DEB_REPOS),$(subst |,$(newline)deb ,deb $(EXTRA_DEB_REPOS)))
+endef
+
+define policy_rc_d
+#!/bin/sh
+# suppress starting services in the staging chroot
+exit 101
+endef
+
+$(BUILD_DIR)/mirror/ubuntu/createchroot.done: export APT_SOURCES_LIST:=$(apt_sources_list)
+$(BUILD_DIR)/mirror/ubuntu/createchroot.done: export POLICY_RC_D:=$(policy_rc_d)
+
 $(BUILD_DIR)/mirror/ubuntu/createchroot.done:
 	echo "DEBUG>>>>>>>>>>>>  local mirror:" $(LOCAL_MIRROR_UBUNTU_OS_BASEURL)  
 	mkdir -p $(LOCAL_MIRROR_UBUNTU_OS_BASEURL)/chroot
