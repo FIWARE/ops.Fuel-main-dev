@@ -56,6 +56,9 @@ deep_clean: clean
 
 distclean: deep_clean clean-integration-test
 
+# Evenutally include custom configuration file.
+-include $(SOURCE_DIR)/custom.mk
+
 # Common configuration file.
 include $(SOURCE_DIR)/config.mk
 
