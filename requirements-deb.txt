@@ -903,7 +903,7 @@ libapache2-mod-php5
 libapache2-mod-php5filter
 libconfig-tiny-perl
 libcurl4-openssl-dev
-libgcrypt11-dev
+libgcrypt11-fi-dev
 libmath-calc-units-perl
 libnagios-plugin-perl
 libparams-validate-perl
