@@ -902,8 +902,6 @@ lessc
 libapache2-mod-php5
 libapache2-mod-php5filter
 libconfig-tiny-perl
-libcurl4-openssl-dev
-libgcrypt11-fi-dev
 libmath-calc-units-perl
 libnagios-plugin-perl
 libparams-validate-perl
@@ -920,7 +918,6 @@ nagios-nrpe-server
 nagios-plugins
 nagios-plugins-basic
 nagios-plugins-extra
-nagios-plugins-os-libvirt
 nagios-plugins-standard
 nagios-snmp-plugins
 nfs-common
