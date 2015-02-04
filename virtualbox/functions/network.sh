@@ -142,7 +142,9 @@ create_hostonly_interface() {
 }
 
 delete_all_hostonly_interfaces() {
-  OIFS=$IFS;IFS=",";list=(`VBoxManage list hostonlyifs | grep '^Name' | sed 's/^Name\:[ \t]*//' | uniq | tr "\\n" ","`);IFS=$OIFS
+  #OIFS=$IFS;IFS=",";list=(`VBoxManage list hostonlyifs | grep '^Name' | sed 's/^Name\:[ \t]*//' | uniq | tr "\\n" ","`);IFS=$OIFS
+  #Fix: Remove only vboxnet0,vboxnet1,vboxnet2. vboxnet>2 are mine!
+  OIFS=$IFS;IFS=",";list=(`echo vboxnet0,vboxnet1,vboxnet2,`);IFS=$OIFS
   # Delete every single hostonly interface in the system
   for interface in "${list[@]}"; do
     echo "Deleting host-only interface: $interface..."
