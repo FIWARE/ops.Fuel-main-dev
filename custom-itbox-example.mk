@@ -7,6 +7,6 @@ NAILGUN_COMMIT?=si/2.0
 FUELLIB_REPO?=https://github.com/SmartInfrastructures/fuel-libray-dev.git
 NAILGUN_REPO?=https://github.com/SmartInfrastructures/fuel-web-dev.git
 
-EXTRA_DEB_REPOS?="http://repo.create-net.org/si/2.0 precise custom"
+EXTRA_DEB_REPOS?=http://repo.create-net.org/si/2.0 precise custom
 
 FEATURE_GROUPS?=experimental,fiware
