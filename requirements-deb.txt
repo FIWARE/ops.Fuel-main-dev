@@ -918,6 +918,8 @@ nagios-nrpe-server
 nagios-plugins
 nagios-plugins-basic
 nagios-plugins-extra
+nagios-plugins-os-libvirt
+nagios-plugins-os-swift
 nagios-plugins-standard
 nagios-snmp-plugins
 nfs-common
