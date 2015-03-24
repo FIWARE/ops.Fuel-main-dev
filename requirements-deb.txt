@@ -739,6 +739,7 @@ python-openid
 python-openssl
 python-openstack-auth
 python-oslo.config
+python-osnagios
 python-pam
 python-paramiko
 python-passlib
