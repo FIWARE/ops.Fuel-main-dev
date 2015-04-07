@@ -922,7 +922,13 @@ nagios-plugins-extra
 nagios-plugins-os-libvirt
 nagios-plugins-os-swift
 nagios-plugins-standard
+nagios-plugin-mongodb
+nagios-plugins-ceph
+nagios-plugins-rabbitmq
 nagios-snmp-plugins
+liburi-perl
+libdata-serializer-perl
+liblwp-useragent-determined-perl
 nfs-common
 php5
 php5-cgi
