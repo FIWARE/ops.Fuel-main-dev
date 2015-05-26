@@ -36,7 +36,12 @@ rm_network=0
 # 172.16.1.1/24  - OpenStack Fixed/Internal/Private network
 # 192.168.0.1/24 - OpenStack Management network
 # 192.168.1.1/24 - OpenStack Storage network (for Ceph, Swift etc)
-fuel_master_ips="10.20.0.1 172.16.0.254 172.16.1.1"
+if [ "$CONFIG_FOR" = "PERSONAL_CONFIG" ]
+then
+  fuel_master_ips="$personal_master_network $personal_external_ip $personal_internal_ip"
+else
+  fuel_master_ips="10.20.0.1 172.16.0.254 172.16.1.1"
+fi
 
 # Network mask for fuel interfaces
 mask="255.255.255.0"
@@ -86,7 +91,7 @@ vm_master_nat_gateway=192.168.200.2
 # If you modify networking params for master node during the boot time
 #   (i.e. if you pressed Tab in a boot loader and modified params),
 #   make sure that these values reflect that change.
-vm_master_ip=10.20.0.2
+vm_master_ip=${personal_master_ip:-'10.20.0.2'}
 vm_master_username=root
 vm_master_password=r00tme
 vm_master_prompt='root@fuel ~]#'
@@ -99,6 +104,8 @@ if [ "$CONFIG_FOR" = "16GB" ]; then
   cluster_size=5
 elif [ "$CONFIG_FOR" = "8GB" ]; then
   cluster_size=3
+elif [ "$CONFIG_FOR" = "PERSONAL_CONFIG" ]; then
+  cluster_size=$personal_cluster_size
 else
   # Section for custom configuration
   cluster_size=3
@@ -122,6 +129,12 @@ elif [ "$CONFIG_FOR" = "8GB" ]; then
   vm_slave_cpu[1]=1
   vm_slave_cpu[2]=1
   vm_slave_cpu[3]=1
+elif [ "$CONFIG_FOR" = "PERSONAL_CONFIG" ]; then
+  vm_slave_cpu_default=$personal_slave_cpu
+  for i in `seq 1 $personal_cluster_size`
+  do
+    vm_slave_cpu[$i]=$personal_slave_cpu
+  done
 else
   # Section for custom configuration
   vm_slave_cpu_default=1
@@ -158,6 +171,12 @@ elif [ "$CONFIG_FOR" = "8GB" ]; then
   vm_slave_memory_mb[1]=1536
   vm_slave_memory_mb[2]=1536
   vm_slave_memory_mb[3]=1536
+elif [ "$CONFIG_FOR" = "PERSONAL_CONFIG" ]; then
+  vm_slave_memory_default=$personal_ram
+  for i in `seq 1 $personal_cluster_size`
+   do
+    vm_slave_memory_mb[$i]=$personal_ram
+   done
 else
   # Section for custom configuration
   vm_slave_memory_default=1024
