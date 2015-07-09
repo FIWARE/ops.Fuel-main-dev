@@ -16,10 +16,9 @@ Any feedbacks are welcome, including bugs, typos or things you think should be i
 ### Requirements
 ### Network setup
 ### Upgrading from a previous version
+### Checking status
 
-## Checking status
-
-## Know issues
+## Known issues
 ## User manual
 
 
