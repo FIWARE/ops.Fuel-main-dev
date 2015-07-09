@@ -13,13 +13,14 @@ Any feedbacks are welcome, including bugs, typos or things you think should be i
 ### Features available
 
 ## Download and install OPS-Deploy
-### Requirements
+### Prerequisites 
 ### Network setup
 ### Upgrading from a previous version
 ### Checking status
 
 ## Known issues
 ## User manual
+## License
 
 
 [1] http://www.fiware.org/
