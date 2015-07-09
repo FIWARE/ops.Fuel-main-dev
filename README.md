@@ -21,6 +21,7 @@ Any feedbacks are welcome, including bugs, typos or things you think should be i
 ## Known issues
 ## User manual
 ## License
+Apache License, Version 2.0, January 2004
 
 
 [1] http://www.fiware.org/
