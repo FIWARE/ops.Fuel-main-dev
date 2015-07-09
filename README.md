@@ -7,6 +7,9 @@ OPS-Deploy is an open source deployment and management tool for OpenStack. It is
 
 OPS-Deploy is used in FIWARE project in order to deploy a more coherent and tested installation within the FIWARE Lab  federation guaranteeing as well as a better deployment and a more manageable issues resolution.
 
+Any feedbacks are welcome, including bugs, typos or things you think should be included but aren't. You can use github issues to provide feedback.
+
+
 [1] http://www.fiware.org/
 
 [2] http://fuel.mirantis.com/
