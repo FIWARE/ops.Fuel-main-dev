@@ -10,6 +10,17 @@ OPS-Deploy is used in FIWARE project in order to deploy a more coherent and test
 Any feedbacks are welcome, including bugs, typos or things you think should be included but aren't. You can use github issues to provide feedback.
 
 ## Overall description
+### Features available
+
+## Download and install OPS-Deploy
+### Requirements
+### Network setup
+### Upgrading from a previous version
+
+## Checking status
+
+## Know issues
+## User manual
 
 
 [1] http://www.fiware.org/
