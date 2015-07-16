@@ -49,6 +49,8 @@ For a production environment, the suggested minimum hardware requirements are:
 - HDD 256+ GB
 
 ### Network setup
+On the OPS-Deploy node (also named master node), the eth0 network interface is configured to reply to PXE requests. The default network is 10.20.0.2/24 and the gateway 10.20.0.1.
+
 
 ### Upgrading from a previous version
 Not yet available
