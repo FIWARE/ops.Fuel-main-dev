@@ -34,6 +34,7 @@ For any further information, please refer to the Fuel release plan [6].
 ### Prerequisites 
 ### Network setup
 ### Upgrading from a previous version
+Not yet available
 ### Checking status
 
 ## Known issues
