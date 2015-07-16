@@ -37,18 +37,19 @@ The first option is suggested only for testing scopes, whereas the second one is
 ### Prerequisites 
 
 For testing scope, the suggested minimum hardware requirements are:
-Dual-core CPU
-2+ GB RAM
-1 gigabit network port
-HDD 80 GB with dynamic disk expansion
+- Dual-core CPU
+- 2+ GB RAM
+- 1 gigabit network port
+- HDD 80 GB with dynamic disk expansion
 
 For a production environment, the suggested minimum hardware requirements are:
-Quad-core CPU
-4+ GB RAM
-1 gigabit network port
-HDD 256+ GB
+- Quad-core CPU
+- 4+ GB RAM
+- 1 gigabit network port
+- HDD 256+ GB
 
 ### Network setup
+
 ### Upgrading from a previous version
 Not yet available
 ### Checking status
