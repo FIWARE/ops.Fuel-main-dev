@@ -30,7 +30,22 @@ The monitoring node is installed whether in Multi-Node mode or in HA mode on a s
 
 For any further information, please refer to the Fuel release plan [6].
 
-## Download and install OPS-Deploy
+## Installation
+You can download the OPS-Deploy installer from the "Releases" tab. It is distributed as an ISO image, that can be installed  using a virtualization software package, such as VirtualBox, or on a bare-metal server.
+The first option is suggested only for testing scopes, whereas the second one is suggested for production environment.
+
+Suggested minimum hardware requirements for installation in testing environment:
+Dual-core CPU
+2+ GB RAM
+1 gigabit network port
+HDD 80 GB with dynamic disk expansion
+
+Suggested minimum hardware requirements for installation in production environment:
+Quad-core CPU
+4+ GB RAM
+1 gigabit network port
+HDD 256+ GB
+
 ### Prerequisites 
 ### Network setup
 ### Upgrading from a previous version
