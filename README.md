@@ -10,8 +10,7 @@ OPS-Deploy is used in FIWARE project in order to deploy a more coherent and test
 Any feedbacks are welcome, including bugs, typos or things you think should be included but aren't. You can use github issues to provide feedback.
 
 ## Overall description
-OPS-Deploy is a complex software composed by a set of Puppet scripts, a task orchestrator (Astute [3]) and a UI. Its goal is to provide a deployment tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support an infrastructure owner to set up a new node more easily and fastly and install a more consistent node into FIWARE Lab federation.
-
+OPS-Deploy is a complex software composed by a set of Puppet scripts, a task orchestrator (Astute [3]) and a UI. Its goal is to provide a deployment tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support a cloud infrastructure owner to set up a new node more quickly than a manual installation and as well building a more coherent and tested node within the FIWARE Lab federation.
 
 ### Features available
 
