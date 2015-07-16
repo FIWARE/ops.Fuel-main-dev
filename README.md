@@ -34,19 +34,20 @@ For any further information, please refer to the Fuel release plan [6].
 You can download the OPS-Deploy installer from the "Releases" tab. It is distributed as an ISO image, that can be installed  using a virtualization software package, such as VirtualBox, or on a bare-metal server.
 The first option is suggested only for testing scopes, whereas the second one is suggested for production environment.
 
-Suggested minimum hardware requirements for installation in testing environment:
+### Prerequisites 
+
+For testing scope, the suggested minimum hardware requirements are:
 Dual-core CPU
 2+ GB RAM
 1 gigabit network port
 HDD 80 GB with dynamic disk expansion
 
-Suggested minimum hardware requirements for installation in production environment:
+For a production environment, the suggested minimum hardware requirements are:
 Quad-core CPU
 4+ GB RAM
 1 gigabit network port
 HDD 256+ GB
 
-### Prerequisites 
 ### Network setup
 ### Upgrading from a previous version
 Not yet available
