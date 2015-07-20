@@ -68,6 +68,8 @@ id | name                       | state     | operating_system | version
 
 
 ## Known issues
+OPS-Deploy inherits some issues from Fuel 5.1.1. The main of them, are summarized below.
+
 ### OPS-Deploy requires a pingable default gateway in order to deploy
 OPS-Deploy must be able to ping the default gateway in order to deploy the environment. If your configuration does not
 include a pingable default gateway, you can work around it by specifying the Fuel Master node (or any other
