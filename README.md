@@ -57,7 +57,7 @@ On the OPS-Deploy node (also named master node), the eth0 network interface is c
 ### Checking status
 
 In order to verify the correct installation of the ITBox, the user can use the following command:
-fuel --os-username admin --os-password admin release
+**fuel --os-username admin --os-password admin release
 
 The answer should be as follows:
 
@@ -82,10 +82,9 @@ The Deassociate floating IP button may disappear from the Horizon menu when usin
 topologies. You can, however, still use the Horizon UI to deassocciate IP addresses: navigate to the Project page,
 then open Access&Security -> Floating IPs and deassociate the IP addresses here. See [Patch 1325575] https://bugs.launchpad.net/bugs/1325575.
 
-
-
-
 ## User manual
+
+
 ## License
 Apache License, Version 2.0, January 2004
 
