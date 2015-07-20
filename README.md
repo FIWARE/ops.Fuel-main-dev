@@ -56,6 +56,17 @@ On the OPS-Deploy node (also named master node), the eth0 network interface is c
 
 ### Checking status
 
+In order to verify the correct installation of the ITBox, the user can use the following command:
+fuel --os-username admin --os-password admin release
+
+The answer should be as follows:
+
+id | name                       | state     | operating_system | version
+---|----------------------------|-----------|------------------|-------------
+1  | Icehouse on CentOS 6.5     | available | CentOS           | 2014.1.1-5.1
+2  | Icehouse on Ubuntu 12.04.4 | available | Ubuntu           | 2014.1.1-5.1
+
+
 ## Known issues
 ## User manual
 ## License
