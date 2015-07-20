@@ -33,8 +33,9 @@ Now the environment is ready for deployment (Fig. 3).
   In environment creation process the user should define the architecture of his cloud infrastructure. The user assigns the role to every server, configures the network, defines the space allocated to hard disks and settings other Openstack options (Fig. 4).
   
 .. image:: _static/OPS-Deploy-4.png
-     :alt: The page of the created environment
+     :alt:  environment definition
      :scale: 75%
+*Fig. 4:  Environment definition*      
      
 Giving roles to servers
 +++++
