@@ -72,10 +72,7 @@ id | name                       | state     | operating_system | version
 OPS-Deploy must be able to ping the default gateway in order to deploy the environment. If your configuration does not
 include a pingable default gateway, you can work around it by specifying the Fuel Master node (or any other
 pingable host) as the default gateway.
-Alternatively, you can apply Patch 138448 to disable the requirement to ping the default gateway. After applying
-this patch, you need to enable it with following sequence of steps.[6]
-![Minion](http://octodex.github.com/images/minion.png)
-
+Alternatively, you can apply  [Patch 138448!](https://review.openstack.org/#/c/138448) to disable the requirement to ping the default gateway. After applying this patch, you need to enable it with following sequence of steps [6].
 
 ## User manual
 ## License
