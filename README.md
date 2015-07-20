@@ -33,7 +33,9 @@ For any further information, please refer to the Fuel release plan [6].
 ## Installation
 You can download the OPS-Deploy installer from the "Releases" tab. It is distributed as an ISO image, that can be installed  using a virtualization software package, such as VirtualBox, or on a bare-metal server.
 The first option is suggested only for testing scopes, whereas the second one is suggested for production environment.
-For further information about the installation procedure,  please refer to the Fuel User Guide [7].
+When installation is completed the system will be booted. Please pay attention to remove the installation media from the master node. Finally, by the browser you can visit the page http://10.20.0.2:8000 and log in using the admin credentials (by default they are admin/admin, whereas the default admin credentials for loggin in on the master node are root/r00tme. It is kindly recommended to change the password after you log in (using the passwd command). 
+
+For any further information about the installation procedure,  please refer to the Fuel User Guide [7].
 
 ### Prerequisites 
 
@@ -52,9 +54,6 @@ For a production environment, the suggested minimum hardware requirements are:
 ### Network setup
 On the OPS-Deploy node (also named master node), the eth0 network interface is configured to reply to PXE requests. The default network is 10.20.0.2/24 and the gateway 10.20.0.1.
 
-
-### Upgrading from a previous version
-Not yet available
 ### Checking status
 
 ## Known issues
