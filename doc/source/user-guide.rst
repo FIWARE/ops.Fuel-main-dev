@@ -2,8 +2,8 @@ User Guide
 ==========
 
 Homepage
-
 +++++
+
 When the user has completed the master node installation, he can access OPS-Deploy UI, visiting the default url http://10.20.0.2:8000/ and after inserting the credentials (default: admin/admin) the screen appears like in Fig. 1.
 
 .. image:: _static/OPS-Deploy-1.png
@@ -31,7 +31,6 @@ Now the environment is ready for deployment (Fig. 3).
      :scale: 90%
      
 Giving roles to servers
-
 +++++
 
 In “Nodes” tab, the user can view the state of his environment, where the nodes are ordered by Roles. Thus, the user can view the node's details and configure them appropriately.
@@ -57,7 +56,6 @@ When the changes are applied, it is possible to tune the node, by clicking on th
      :scale: 90%
 
 Network settings
-
 +++++
 
 In the Network section, the user can manage configuration parameters. Based on theOpenstack network architecture, OPS-Deploy considers three networks: Public, Management and Storage. Management and Storage sections indicate the network subnet in CIDR notation and VLAN tags, whereas thePublic section allows to set the IPs pool and its VLAN tag (Fig. 11).     
@@ -73,7 +71,6 @@ The OPS-Deploy gives user the opportunity to manage the Neutron plugin and to de
      :scale: 90%
 
 General Settings
-
 +++++
 
 The "Settings" tab contains options useful to manage the current environment. Here, the user can select one or more monitoring GEs (e.g. Nagios, ContextBroker, NGSI Adapter, OpenStackDataCollector) and configure them. Moreover, the user can change the Openstack admin account or can change the hypervisor type or the scheduler driver. To make variations permanently it is necessary re-deploy the changes. (Fig. 13,14, 15, 16, 17).
@@ -99,13 +96,11 @@ The "Settings" tab contains options useful to manage the current environment. He
      :scale: 90%  
 
 Logs
-
 +++++
 
 The log section is designed to monitore the state of installation and support the troubleshooting. The user can select the node to monitoring, the log level and the generator source.
 
 Health Check
-
 +++++
 
 It is very useful, running a post deployment test, to see if the installation process is correctly finished. The Health check process runs a set of tests, and when it is done, the user will see green Thumbs Up sign if it was correct and a red Thumbs Down sign if something went wrong (Fig. 16).
@@ -115,7 +110,6 @@ It is very useful, running a post deployment test, to see if the installation pr
      :scale: 90%  
      
 Deployment
-
 +++++
 
 Start deploy When the user has finished setting the environment, he can start the deployment process, clicking on "Deploy changes" button (Fig. 17).
