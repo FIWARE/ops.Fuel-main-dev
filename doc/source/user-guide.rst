@@ -4,13 +4,13 @@ User Guide
 Homepage
 
 +++++
-When the user has completed the master node installation, he can access ITBox UI, visiting the default url http://10.20.0.2:8000/ and after inserting the credentials (default: admin/admin) the screen appears like in Fig. 1.
+When the user has completed the master node installation, he can access OPS-Deploy UI, visiting the default url http://10.20.0.2:8000/ and after inserting the credentials (default: admin/admin) the screen appears like in Fig. 1.
 
 .. image:: _static/OPS-Deploy-1.png
      :alt: OPS-Deploy homepage
      :scale: 90%
      
-The user sets bare-metal servers to boot from network via PXE and power them on. They will start automatically with a bootstrap operating system, based on Centos. The ITBox will notify discovered nodes on ITBox UI (see Fig. 3 in the upper right corner). At this moment, the user could create a new environment.
+The user sets bare-metal servers to boot from network via PXE and power them on. They will start automatically with a bootstrap operating system, based on Centos. The OPS-Deploy will notify discovered nodes on OPS-Deploy UI (see Fig. 3 in the upper right corner). At this moment, the user could create a new environment.
 
 .. image:: _static/OPS-Deploy-2.png
      :alt: Creation of a new environment
@@ -35,7 +35,7 @@ Giving roles to servers
 +++++
 
 In “Nodes” tab, the user can view the state of his environment, where the nodes are ordered by Roles. Thus, the user can view the node's details and configure them appropriately.
-By clicking on “Add Nodes” button, the ITBox shows users the list of available roles and the list of unallocated nodes. After selecting a role, other incompatible roles are automatically disabled. For example, a controller node cannot be together with a compute node simultaneously, and so on.
+By clicking on “Add Nodes” button, the OPS-Deploy shows users the list of available roles and the list of unallocated nodes. After selecting a role, other incompatible roles are automatically disabled. For example, a controller node cannot be together with a compute node simultaneously, and so on.
 Finally the user applies changes (Fig. 5).     
 
 .. image:: _static/OPS-Deploy-5.png
@@ -60,13 +60,13 @@ Network settings
 
 +++++
 
-In the Network section, the user can manage configuration parameters. Based on theOpenstack network architecture, ITBox considers three networks: Public, Management and Storage. Management and Storage sections indicate the network subnet in CIDR notation and VLAN tags, whereas thePublic section allows to set the IPs pool and its VLAN tag (Fig. 11).     
+In the Network section, the user can manage configuration parameters. Based on theOpenstack network architecture, OPS-Deploy considers three networks: Public, Management and Storage. Management and Storage sections indicate the network subnet in CIDR notation and VLAN tags, whereas thePublic section allows to set the IPs pool and its VLAN tag (Fig. 11).     
 
 .. image:: _static/OPS-Deploy-9.png
      :alt: infrastructure network settings
      :scale: 90%
 
-The ITBox gives user the opportunity to manage the Neutron plugin and to define the L2 connection tunnel ID range and the L3 floating IP range. Furthermore, the user can verify the network configuration by clicking the “Verify Network” button, which checks for connectivity between nodes using the configured VLANs. It also checks if if some external DHCP interferes with the current deployment (Fig. 12).
+The OPS-Deploy gives user the opportunity to manage the Neutron plugin and to define the L2 connection tunnel ID range and the L3 floating IP range. Furthermore, the user can verify the network configuration by clicking the “Verify Network” button, which checks for connectivity between nodes using the configured VLANs. It also checks if if some external DHCP interferes with the current deployment (Fig. 12).
 
 .. image:: _static/OPS-Deploy-10.png
      :alt:  L2/L3 Neutron configuration
