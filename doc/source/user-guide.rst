@@ -8,27 +8,33 @@ When the user has completed the master node installation, he can access OPS-Depl
 
 .. image:: _static/OPS-Deploy-1.png
      :alt: OPS-Deploy homepage
-     :scale: 90%
-     
-The user sets bare-metal servers to boot from network via PXE and power them on. They will start automatically with a bootstrap operating system, based on Centos. The OPS-Deploy will notify discovered nodes on OPS-Deploy UI (see Fig. 3 in the upper right corner). At this moment, the user could create a new environment.
+     :align: center
+     :scale: 75%
+*Fig. 1: OPS-Deploy homepage*
+
+The user sets bare-metal servers to boot from network via PXE and power them on. They will start automatically with a bootstrap operating system, based on Centos. The OPS-Deploy will notify discovered nodes on OPS-Deploy UI (see Fig. 1 in the upper right corner). At this moment, the user could create a new environment.
 
 .. image:: _static/OPS-Deploy-2.png
      :alt: Creation of a new environment
-     :scale: 90%
+     :scale: 75%
+*Fig. 2: Creation of a new environment*
      
-The first step that involves the user is the “New Openstack Environment” creation (Fig. 4), where the user inserts such basic information about the environment as name, operating system, deployment mode (multi-node or multi-node with High Availability), hypervisor and network manager (Nova-Network, Neutron with GRE, Neutron with VLAN).
+     
+The first step that involves the user is the “New Openstack Environment” creation (Fig. 2), where the user inserts such basic information about the environment as name, operating system, deployment mode (multi-node or multi-node with High Availability), hypervisor and network manager (Nova-Network, Neutron with GRE, Neutron with VLAN).
 
 Now the environment is ready for deployment (Fig. 3).
 
 .. image:: _static/OPS-Deploy-3.png
      :alt: The page of the created environment
-     :scale: 90%
+     :scale: 75%
+     :align: center
+*Fig. 3: The page of the created environment*      
      
-  In environment creation process the user should define the architecture of his cloud infrastructure. The user assigns the role to every server, configures the network, defines the space allocated to hard disks and settings other Openstack options (Fig.64).
+  In environment creation process the user should define the architecture of his cloud infrastructure. The user assigns the role to every server, configures the network, defines the space allocated to hard disks and settings other Openstack options (Fig. 4).
   
 .. image:: _static/OPS-Deploy-4.png
      :alt: The page of the created environment
-     :scale: 90%
+     :scale: 75%
      
 Giving roles to servers
 +++++
