@@ -4,7 +4,7 @@ User Guide
 Homepage
 +++++
 
-When the user has completed the master node installation, he can access OPS-Deploy UI, visiting the default url http://10.20.0.2:8000/ and after inserting the credentials (default: admin/admin) the screen appears like in Fig. 1.
+The OPS-Deploy's UI is accessible at the default url http://10.20.0.2:8000/. Using the admin credentials (by default they are admin/admin),the user is able to access to the Dashboard (see Fig. 1).
 
 .. image:: _static/OPS-Deploy-1.png
      :alt: OPS-Deploy homepage
@@ -12,7 +12,7 @@ When the user has completed the master node installation, he can access OPS-Depl
      :scale: 75%
 *Fig. 1: OPS-Deploy homepage*
 
-The user sets bare-metal servers to boot from network via PXE and power them on. They will start automatically with a bootstrap operating system, based on Centos. The OPS-Deploy will notify discovered nodes on OPS-Deploy UI (see Fig. 1 in the upper right corner). At this moment, the user could create a new environment.
+The user sets bare-metal servers to boot from network via PXE and power them on. They will start automatically with a bootstrap operating system, based on Centos. The OPS-Deploy will notify discovered nodes on OPS-Deploy UI (see Fig. 1 in the upper right corner) and the user can create a new environment.
 
 .. image:: _static/OPS-Deploy-2.png
      :alt: Creation of a new environment
@@ -69,7 +69,8 @@ When the changes are applied, it is possible to tune the node, by clicking on th
 Network settings
 +++++
 
-In the Network section, the user can manage configuration parameters. Based on theOpenstack network architecture, OPS-Deploy considers three networks: Public, Management and Storage. Management and Storage sections indicate the network subnet in CIDR notation and VLAN tags, whereas thePublic section allows to set the IPs pool and its VLAN tag (Fig. 11).     
+In the Network section, the user can manage configuration parameters. Based on the Openstack network architecture, OPS-Deploy considers four networks: Public, Management, Private and Storage. Management and Storage sections indicate the network subnet in CIDR notation and VLAN tags, whereas the Public section allows to set the IPs pool and its VLAN tag (Fig. 11). The Private Network (also named Fixed network) identifies the network between each tenant's VMs. Private network address spaces are not a part of the enterprise network address space; fixed IPs of virtual instances cannot be accessed directly from other networks and so, clearly, the private network should be isolated from other networks for security reasons. 
+
 
 .. image:: _static/OPS-Deploy-9.png
      :alt: infrastructure network settings
@@ -123,7 +124,7 @@ The "Settings" tab contains options useful to manage the current environment. He
 Logs
 +++++
 
-The log section is designed to monitore the state of installation and support the troubleshooting. The user can select the node to monitoring, the log level and the generator source.
+The log section is designed to monitor the state of installation and support the troubleshooting. The user can select the node to monitoring, the log level and the generator source.
 
 Health Check
 +++++
