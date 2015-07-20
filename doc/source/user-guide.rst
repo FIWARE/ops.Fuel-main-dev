@@ -146,3 +146,4 @@ Start deploy When the user has finished setting the environment, he can start th
      :scale: 75%  
      
 *Fig. 17: installation in progress*
+ 
