@@ -30,7 +30,7 @@ Now the environment is ready for deployment (Fig. 3).
      :align: center
 *Fig. 3: The page of the created environment*      
      
-  In environment creation process the user should define the architecture of his cloud infrastructure. The user assigns the role to every server, configures the network, defines the space allocated to hard disks and settings other Openstack options (Fig. 4).
+In environment creation process the user should define the architecture of his cloud infrastructure. The user assigns the role to every server, configures the network, defines the space allocated to hard disks and settings other Openstack options (Fig. 4).
   
 .. image:: _static/OPS-Deploy-4.png
      :alt:  environment definition
@@ -45,22 +45,26 @@ By clicking on “Add Nodes” button, the OPS-Deploy shows users the list of av
 Finally the user applies changes (Fig. 5).     
 
 .. image:: _static/OPS-Deploy-5.png
-     :alt: The page of the created environment
-     :scale: 90%
+     :alt: the list of available servers
+     :scale: 75%
+*Fig. 5:  the list of available servers*
 
-When the changes are applied, it is possible to tune the node, by clicking on the right button indicated by the gear icon. The OPS-Deploy shows a dialog where the user can configure network interfaces, defines the space allocated to hard disks and views server informations (e.g. Service tag, Mac addresses, hardware specifications, etc.) (Fig.8, 9, 10).
+When the changes are applied, it is possible to tune the node, by clicking on the right button indicated by the gear icon. The OPS-Deploy shows a dialog where the user can configure network interfaces, defines the space allocated to hard disks and views server informations (e.g. Service tag, Mac addresses, hardware specifications, etc.) (Fig.6, 7, 8).
 
 .. image:: _static/OPS-Deploy-6.png
      :alt: network interfaces configuration
-     :scale: 90%
-     
+     :scale: 75%
+*Fig. 6:  network interfaces configuration*
+
 .. image:: _static/OPS-Deploy-7.png
      :alt: hard disks configuration
-     :scale: 90%
+     :scale: 75%
+*Fig. 7: hard disks configuration*
 
 .. image:: _static/OPS-Deploy-8.png
      :alt: detailed informations about the selected server
-     :scale: 90%
+     :scale: 75%
+*Fig. 8: detailed informations about the selected server*
 
 Network settings
 +++++
@@ -69,38 +73,52 @@ In the Network section, the user can manage configuration parameters. Based on t
 
 .. image:: _static/OPS-Deploy-9.png
      :alt: infrastructure network settings
-     :scale: 90%
+     :scale: 75%
 
-The OPS-Deploy gives user the opportunity to manage the Neutron plugin and to define the L2 connection tunnel ID range and the L3 floating IP range. Furthermore, the user can verify the network configuration by clicking the “Verify Network” button, which checks for connectivity between nodes using the configured VLANs. It also checks if if some external DHCP interferes with the current deployment (Fig. 12).
+*Fig. : infrastructure network settings*
+
+The OPS-Deploy gives user the opportunity to manage the Neutron plugin and to define the L2 connection tunnel ID range and the L3 floating IP range. Furthermore, the user can verify the network configuration by clicking the “Verify Network” button, which checks for connectivity between nodes using the configured VLANs. It also checks if if some external DHCP interferes with the current deployment (Fig. 10).
 
 .. image:: _static/OPS-Deploy-10.png
      :alt:  L2/L3 Neutron configuration
-     :scale: 90%
+     :scale: 75%
+     
+*Fig. : L2/L3 Neutron configuration*
 
 General Settings
 +++++
 
-The "Settings" tab contains options useful to manage the current environment. Here, the user can select one or more monitoring GEs (e.g. Nagios, ContextBroker, NGSI Adapter, OpenStackDataCollector) and configure them. Moreover, the user can change the Openstack admin account or can change the hypervisor type or the scheduler driver. To make variations permanently it is necessary re-deploy the changes. (Fig. 13,14, 15, 16, 17).
+The "Settings" tab contains options useful to manage the current environment. Here, the user can select one or more monitoring GEs (e.g. Nagios, ContextBroker, NGSI Adapter, OpenStackDataCollector) and configure them. Moreover, the user can change the Openstack admin account or can change the hypervisor type or the scheduler driver. To make variations permanently it is necessary re-deploy the changes. (Fig. 11,12, 13, 14, 15).
 
 .. image:: _static/OPS-Deploy-11.png
      :alt:  Infrastructure settings (Access, Additional Components)
-     :scale: 90%
+     :scale: 75%
+
+*Fig. 11: Infrastructure settings (Access, Additional Components)*
 
 .. image:: _static/OPS-Deploy-12.png
      :alt: Infrastructure settings (Common)
-     :scale: 90%
+     :scale: 75%
+
+*Fig. 12: Infrastructure settings (Common)*
 
 .. image:: _static/OPS-Deploy-13.png
      :alt: Infrastructure settings (Kernel parameters, Syslog and Mellanox Neutron Components)
-     :scale: 90%     
+     :scale: 75%     
+
+*Fig. 13 : Infrastructure settings (Kernel parameters, Syslog and Mellanox Neutron Components)*
 
 .. image:: _static/OPS-Deploy-14.png
      :alt: Infrastructure settings (Public network assignment, Storage)
-     :scale: 90%   
+     :scale: 75%   
      
+*Fig. 14: Infrastructure settings (Public network assignment, Storage)*
+
 .. image:: _static/OPS-Deploy-15.png
      :alt: Infrastructure settings (Monitoring: Nagios and Zabbix)
-     :scale: 90%  
+     :scale: 75%  
+
+*Fig. 15: Infrastructure settings (Monitoring: Nagios and Zabbix)*
 
 Logs
 +++++
@@ -114,8 +132,10 @@ It is very useful, running a post deployment test, to see if the installation pr
 
 .. image:: _static/OPS-Deploy-16.png
      :alt:  health check result
-     :scale: 90%  
-     
+     :scale: 75%  
+
+*Fig. : health check result*     
+
 Deployment
 +++++
 
@@ -123,5 +143,6 @@ Start deploy When the user has finished setting the environment, he can start th
 
 .. image:: _static/OPS-Deploy-17.png
      :alt:  installation in progress
-     :scale: 90%  
+     :scale: 75%  
      
+*Fig. : installation in progress*
