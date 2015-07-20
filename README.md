@@ -33,6 +33,7 @@ For any further information, please refer to the Fuel release plan [6].
 ## Installation
 You can download the OPS-Deploy installer from the "Releases" tab. It is distributed as an ISO image, that can be installed  using a virtualization software package, such as VirtualBox, or on a bare-metal server.
 The first option is suggested only for testing scopes, whereas the second one is suggested for production environment.
+For further information about the installation procedure,  please refer to the Fuel User Guide [7].
 
 ### Prerequisites 
 
@@ -73,3 +74,5 @@ Apache License, Version 2.0, January 2004
 [5] Fuel by Mirantis 5.1: https://docs.mirantis.com/openstack/fuel/fuel-5.1/
 
 [6] Fuel 5.1.1 release notes: https://docs.mirantis.com/openstack/fuel/fuel-5.1/release-notes.html#release-notes
+
+[7] Fuel 5.1.1 User guide: https://docs.mirantis.com/openstack/fuel/fuel-5.1/user-guide.html
