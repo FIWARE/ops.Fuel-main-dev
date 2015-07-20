@@ -68,6 +68,15 @@ id | name                       | state     | operating_system | version
 
 
 ## Known issues
+### OPS-Deploy requires a pingable default gateway in order to deploy
+OPS-Deploy must be able to ping the default gateway in order to deploy the environment. If your configuration does not
+include a pingable default gateway, you can work around it by specifying the Fuel Master node (or any other
+pingable host) as the default gateway.
+Alternatively, you can apply Patch 138448 to disable the requirement to ping the default gateway. After applying
+this patch, you need to enable it with following sequence of steps.[6]
+![Minion](http://octodex.github.com/images/minion.png)
+
+
 ## User manual
 ## License
 Apache License, Version 2.0, January 2004
@@ -86,3 +95,4 @@ Apache License, Version 2.0, January 2004
 [6] Fuel 5.1.1 release notes: https://docs.mirantis.com/openstack/fuel/fuel-5.1/release-notes.html#release-notes
 
 [7] Fuel 5.1.1 User guide: https://docs.mirantis.com/openstack/fuel/fuel-5.1/user-guide.html
+
