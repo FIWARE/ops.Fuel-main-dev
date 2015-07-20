@@ -57,7 +57,7 @@ On the OPS-Deploy node (also named master node), the eth0 network interface is c
 ### Checking status
 
 In order to verify the correct installation of the ITBox, the user can use the following command:
-**fuel --os-username admin --os-password admin release
+*fuel --os-username admin --os-password admin release*
 
 The answer should be as follows:
 
@@ -76,7 +76,7 @@ include a pingable default gateway, you can work around it by specifying the Fue
 pingable host) as the default gateway.
 Alternatively, you can apply  [Patch 138448](https://review.openstack.org/#/c/138448) to disable the requirement to ping the default gateway. After applying this patch, you need to enable it with following sequence of steps [6].
 
-### Horizon issues: Deassociate floating IP button may disappear from Horizon menu
+### Deassociate floating IP button may disappear from Horizon menu
 
 The Deassociate floating IP button may disappear from the Horizon menu when using Neutron network
 topologies. You can, however, still use the Horizon UI to deassocciate IP addresses: navigate to the Project page,
