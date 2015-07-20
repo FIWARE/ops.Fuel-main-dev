@@ -75,7 +75,7 @@ In the Network section, the user can manage configuration parameters. Based on t
      :alt: infrastructure network settings
      :scale: 75%
 
-*Fig. : infrastructure network settings*
+*Fig. 9: infrastructure network settings*
 
 The OPS-Deploy gives user the opportunity to manage the Neutron plugin and to define the L2 connection tunnel ID range and the L3 floating IP range. Furthermore, the user can verify the network configuration by clicking the “Verify Network” button, which checks for connectivity between nodes using the configured VLANs. It also checks if if some external DHCP interferes with the current deployment (Fig. 10).
 
@@ -83,7 +83,7 @@ The OPS-Deploy gives user the opportunity to manage the Neutron plugin and to de
      :alt:  L2/L3 Neutron configuration
      :scale: 75%
      
-*Fig. : L2/L3 Neutron configuration*
+*Fig. 10: L2/L3 Neutron configuration*
 
 General Settings
 +++++
@@ -96,7 +96,7 @@ The "Settings" tab contains options useful to manage the current environment. He
 
 *Fig. 11: Infrastructure settings (Access, Additional Components)*
 
-.. image:: _static/OPS-Deploy-12.png
+.. image:: _static/OPS-Deploy-12png
      :alt: Infrastructure settings (Common)
      :scale: 75%
 
@@ -134,7 +134,7 @@ It is very useful, running a post deployment test, to see if the installation pr
      :alt:  health check result
      :scale: 75%  
 
-*Fig. : health check result*     
+*Fig. 16: health check result*     
 
 Deployment
 +++++
@@ -145,4 +145,4 @@ Start deploy When the user has finished setting the environment, he can start th
      :alt:  installation in progress
      :scale: 75%  
      
-*Fig. : installation in progress*
+*Fig. 17: installation in progress*
