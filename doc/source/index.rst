@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to OPS_deploy's documentation!
+Welcome to OPS-Deploy's documentation!
 ================================================
 
 Contents:
@@ -13,15 +13,14 @@ Contents:
 
    user-guide
 
-	     
-
-
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
 
 
 
