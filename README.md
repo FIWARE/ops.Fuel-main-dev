@@ -83,7 +83,7 @@ topologies. You can, however, still use the Horizon UI to deassocciate IP addres
 then open Access&Security -> Floating IPs and deassociate the IP addresses here. See [Patch 1325575] (https://bugs.launchpad.net/bugs/1325575) .
 
 ## User manual
-
+The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/2.0/doc.
 
 ## License
 Apache License, Version 2.0, January 2004
