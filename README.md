@@ -76,6 +76,15 @@ include a pingable default gateway, you can work around it by specifying the Fue
 pingable host) as the default gateway.
 Alternatively, you can apply  [Patch 138448](https://review.openstack.org/#/c/138448) to disable the requirement to ping the default gateway. After applying this patch, you need to enable it with following sequence of steps [6].
 
+### Horizon issues: Deassociate floating IP button may disappear from Horizon menu
+
+The Deassociate floating IP button may disappear from the Horizon menu when using Neutron network
+topologies. You can, however, still use the Horizon UI to deassocciate IP addresses: navigate to the Project page,
+then open Access&Security -> Floating IPs and deassociate the IP addresses here. See [Patch 1325575] https://bugs.launchpad.net/bugs/1325575.
+
+
+
+
 ## User manual
 ## License
 Apache License, Version 2.0, January 2004
