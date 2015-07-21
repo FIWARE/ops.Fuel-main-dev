@@ -19,7 +19,7 @@ LOCAL_MIRROR:=$(abspath $(LOCAL_MIRROR))
 DEPS_DIR?=$(TOP_DIR)/deps
 DEPS_DIR:=$(abspath $(DEPS_DIR))
 
-PRODUCT_VERSION:=6.1
+PRODUCT_VERSION:=3.0
 
 # This variable is used for naming of auxillary objects
 # related to product: repositories, mirrors etc
