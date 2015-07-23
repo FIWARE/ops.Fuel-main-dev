@@ -71,7 +71,7 @@ After the OPS-Deploy Master Node is installed and booted, the user can power on 
 
 Each node sends out DHCP discovery requests and gets the response from the OPS-Deploy node that runs the DHCP server (provided by Cobbler).
 When a node receives the response from the OPS-Deploy node, it fetches the pxelinux bootloader and then the bootstrap image (CentOS based Linux in memory) from the OPS-Deploy node's TFTP server and boots into it.
-When this image is loaded, it reports the node's readiness and configuration to the master node. This can take a few minutes.
+When this image is loaded, it reports the node's readiness and configuration to the master node. This could take a few minutes.
 
 ### Installation verification
 
