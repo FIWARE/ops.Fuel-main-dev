@@ -3,7 +3,7 @@
 This is the code repository for the OPS-Deploy, the management and deployment tool for FIWARE Lab nodes.
 This project is part of FIWARE [1]. 
 
-OPS-Deploy is an open source project, based on Fuel by Mirantis [2] and closely developed to the OpenStack community. It provides a web UI thorught that a cloud administrator can intuitively deploy and manage an OpenStack environment. 
+OPS-Deploy is an open source project, based on Fuel by Mirantis [2] and closely developed to the OpenStack community. It provides a web UI through that a cloud administrator can intuitively deploy and manage an OpenStack environment. 
 
 OPS-Deploy is used in FIWARE project in order to deploy a more coherent and tested installation within the FIWARE Lab  federation guaranteeing as well as a better deployment and a more manageable issues resolution.
 
@@ -16,7 +16,7 @@ As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its ar
 ![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/2.0/doc/source/_static/OPS-Deploy_Architecture.jpg)
 
 In OPS-Deploy several third-party components like Cobbler, Puppet, Mcollective live together to Fuel specific components (e.g. Astute) and FIWARE’s elements (e.g. monitoring GEs ).
-The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation.
+The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation as well to develop the installation scripts for each FIWARE component integrated.
 
 The user is able to interact with OPS-Deploy using both GUI and CLI. They interact with Nailgun which implements REST API as well as deployment data management. It manages disk volumes configuration data, networks configuration data and any other environment specific data which are necessary for successful deployment. Astute can be viewed as composed by Nailgun's workers. Each of them runs certain actions according to the instructions provided from Nailgun. Nailgun uses SQL database to store its data and AMQP service to interact with workers.
 
@@ -26,13 +26,9 @@ Finally, Puppet is the deployment service and through MCollective agents are per
 
 
 ### Features available
-The version 2.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 5.1 [6]. It installs the Icehouse 2014.1.3 release of OpenStack  on Ubuntu 12.04.4.
-The main features included are:
-- The minimum number of controllers for highly available architecture has been eliminated.
-- A number of improvements for the HA have been done (they affect Corosync, Galera, Neutron).
-- The UI Fuel is now protected by access control.
+The version 2.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 5.1 [6]. It installs the Icehouse 2014.1.3 release of OpenStack on Ubuntu 12.04.4.
 
-Furthermore, the following FIWARE monitoring modules are installed:
+The following FIWARE monitoring modules are installed:
 - Nagios 3.5.1
 - Context Broker 0.13
 - NGSI Adapter 1.1.1
@@ -40,6 +36,11 @@ Furthermore, the following FIWARE monitoring modules are installed:
 - OpenStack Data Collector
 
 The monitoring node is installed whether in Multi-Node mode or in HA mode on a separate node.
+
+Additionally:
+- The minimum number of controllers for highly available architecture has been eliminated.
+- A number of improvements for the HA have been done (they affect Corosync, Galera, Neutron).
+- The UI Fuel is now protected by access control.
 
 For any further information, please refer to the Fuel release plan [7].
 
@@ -66,6 +67,11 @@ For a production environment, the suggested minimum hardware requirements are:
 
 ### Network setup
 On the OPS-Deploy node (also named master node), the eth0 network interface is configured to reply to PXE requests. The default network is 10.20.0.2/24 and the gateway 10.20.0.1.
+After the OPS-Deploy Master Node is installed and booted, the user can power on all slave nodes (where the user is going to install OpenStack). First of all, ensure that slave nodes are physically installed in the same network as the Master. After that, the user can boot each node in PXE boot mode (the user should enable it, modifying the BIOS boot order).
+
+Each node sends out DHCP discovery requests and gets the response from the OPS-Deploy node that runs the DHCP server (provided by Cobbler).
+When a node receives the response from the OPS-Deploy node, it fetches the pxelinux bootloader and then the bootstrap image (CentOS based Linux in memory) from the OPS-Deploy node's TFTP server and boots into it.
+When this image is loaded, it reports the node's readiness and configuration to the master node. This can take a few minutes.
 
 ### Installation verification
 
