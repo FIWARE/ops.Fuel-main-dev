@@ -59,7 +59,7 @@ On the OPS-Deploy node (also named master node), the eth0 network interface is c
 
 ## Checking status
 
-In order to verify the correct installation of the ITBox, the user can use the following command:
+In order to verify the correct installation of the OPS-Deploy, the user can use the following command:
 *fuel --os-username admin --os-password admin release*
 
 The answer should be as follows:
