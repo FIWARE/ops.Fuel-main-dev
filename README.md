@@ -57,7 +57,7 @@ For a production environment, the suggested minimum hardware requirements are:
 ### Network setup
 On the OPS-Deploy node (also named master node), the eth0 network interface is configured to reply to PXE requests. The default network is 10.20.0.2/24 and the gateway 10.20.0.1.
 
-### Checking status
+## Checking status
 
 In order to verify the correct installation of the ITBox, the user can use the following command:
 *fuel --os-username admin --os-password admin release*
