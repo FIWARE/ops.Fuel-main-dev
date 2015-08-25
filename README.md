@@ -1,4 +1,3 @@
-=======
 # OPS-Deploy
 
 This is the code repository for the OPS-Deploy, the management and deployment tool for FIWARE Lab nodes.
