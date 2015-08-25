@@ -26,13 +26,14 @@ Finally, Puppet is the deployment service and through MCollective agents are per
 
 
 ### Features available
-The version 2.1 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 5.1 [6]. It installs the Icehouse 2014.1.3 release of OpenStack on Ubuntu 12.04.4and the following monitoring modules:
+The version 2.1 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 5.1 [6]. It installs the Icehouse 2014.1.3 release of OpenStack on Ubuntu 12.04.4 and the following monitoring modules:
 
 - Nagios 3.5.1
 - Context Broker 0.13
 - NGSI Adapter 1.1.1
 - Event Broker 1.3.1
-- The monitoring node is installed whether in Multi-Node mode or in HA mode on a separate node.
+
+The monitoring node is installed whether in Multi-Node mode or in HA mode on a separate node.
 
 #### New features
 - Add nagios notification email
