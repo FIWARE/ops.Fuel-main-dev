@@ -11,7 +11,7 @@ For any feedbacks or bug reports, please use the the github issues tool.
 
 ## Overall description
 OPS-Deploy is a complex software composed by a set of Puppet [3] scripts, a task orchestrator (Nailgun [4]), a task executor (Astute [5]) and a UI. Its goal is to provide a deployment tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support a cloud infrastructure owner to set up a new node more quickly than a manual installation and as well building a more coherent and tested node within the FIWARE Lab federation.
-As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its architecture reflects the original structure. As follows, a brief description of the architecture is provided, but as usual for any detailed information, please refer to the Fuel official documentation [5].
+As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its architecture reflects the original structure. As follows, a brief description of the architecture is provided, but as usual for any detailed information, please refer to the Fuel official documentation [6].
 
 ![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/2.0/doc/source/_static/OPS-Deploy_Architecture.jpg)
 
@@ -26,7 +26,7 @@ Finally, Puppet is the deployment service and through MCollective agents are per
 
 
 ### Features available
-The version 2.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 5.1 [6]. It installs the Icehouse 2014.1.3 release of OpenStack on Ubuntu 12.04.4.
+The version 2.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 5.1 [7]. It installs the Icehouse 2014.1.3 release of OpenStack on Ubuntu 12.04.4.
 
 The following FIWARE monitoring modules are installed:
 - Nagios 3.5.1
@@ -42,14 +42,14 @@ Additionally:
 - A number of improvements for the HA have been done (they affect Corosync, Galera, Neutron).
 - The UI Fuel is now protected by access control.
 
-For any further information, please refer to the Fuel release plan [7].
+For any further information, please refer to the Fuel release plan [8].
 
 ## Installation 
 You can download the OPS-Deploy installer from https://github.com/SmartInfrastructures/fuel-main-dev/releases. It is distributed as an ISO image, that can be installed  using a virtualization software package, such as VirtualBox, or on a bare-metal server.
 The first option is suggested only for testing scopes, whereas the second one is suggested for production environment.
 When installation is completed the system will be booted. Please pay attention to remove the installation media from the master node. Finally, by the browser you can visit the page http://10.20.0.2:8000 and log in using the admin credentials (by default they are admin/admin), whereas the default admin credentials for logging in the master node are root/r00tme. It is highly recommended to change the password after you log in (using the passwd command). 
 
-For any further information about the installation procedure,  please refer to the Fuel User Guide [8].
+For any further information about the installation procedure,  please refer to the Fuel User Guide [9].
 
 ### Prerequisites 
 
@@ -93,7 +93,7 @@ OPS-Deploy inherits some issues from Fuel 5.1.1. The main of them, are summarize
 OPS-Deploy must be able to ping the default gateway in order to deploy the environment. If your configuration does not
 include a pingable default gateway, you can work around it by specifying the Fuel Master node (or any other
 pingable host) as the default gateway.
-Alternatively, you can apply  [Patch 138448](https://review.openstack.org/#/c/138448) to disable the requirement to ping the default gateway. After applying this patch, you need to enable it with following sequence of steps [7].
+Alternatively, you can apply  [Patch 138448](https://review.openstack.org/#/c/138448) to disable the requirement to ping the default gateway. After applying this patch, you need to enable it with following sequence of steps [8].
 
 ### Deassociate floating IP button may disappear from Horizon menu
 
@@ -126,6 +126,3 @@ Apache License, Version 2.0, January 2004
 [8] Fuel 5.1.1 release notes: https://docs.mirantis.com/openstack/fuel/fuel-5.1/release-notes.html#release-notes
 
 [9] Fuel 5.1.1 User guide: https://docs.mirantis.com/openstack/fuel/fuel-5.1/user-guide.html
-
-
-
