@@ -10,10 +10,10 @@ OPS-Deploy is used in FIWARE project in order to deploy a more coherent and test
 For any feedbacks or bug reports, please use the the github issues tool.
 
 ## Overall description
-OPS-Deploy is a complex software composed by a set of Puppet [3] scripts, a task orchestrator (Astute [4]) and a UI. Its goal is to provide a deployment tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support a cloud infrastructure owner to set up a new node more quickly than a manual installation and as well building a more coherent and tested node within the FIWARE Lab federation.
+OPS-Deploy is a complex software composed by a set of Puppet [3] scripts, a task orchestrator (Nailgun [4]), a task executor (Astute [5]) and a UI. Its goal is to provide a deployment tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support a cloud infrastructure owner to set up a new node more quickly than a manual installation and as well building a more coherent and tested node within the FIWARE Lab federation.
 As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its architecture reflects the original structure. As follows, a brief description of the architecture is provided, but as usual for any detailed information, please refer to the Fuel official documentation [5].
 
-![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/2.0/doc/source/_static/OPS-Deploy_Architecture.jpg)
+![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/3.0/doc/source/_static/OPS-Deploy_Architecture.jpg)
 
 In OPS-Deploy several third-party components like Cobbler, Puppet, Mcollective live together to Fuel specific components (e.g. Astute) and FIWARE’s elements (e.g. monitoring GEs ).
 The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation as well to develop the installation scripts for each FIWARE component integrated.
@@ -26,7 +26,7 @@ Finally, Puppet is the deployment service and through MCollective agents are per
 
 
 ### Features available
-The version 3.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 6.1 [6]. It installs OpenStack Juno release 2014.2.2 (2014.1.1-5.1) on Ubuntu 14.04.
+The version 3.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 6.1 [7]. It installs OpenStack Juno release 2014.2.2 (2014.1.1-5.1) on Ubuntu 14.04.
 
 The previous monitoring components are now installed by plugins. 
 Currently are available the following plugins:
@@ -37,15 +37,14 @@ Currently are available the following plugins:
 - NGSI Adapter 1.1.1
 - Context Broker 0.13
 
-
-For any further information, please refer to the Fuel release plan [7].
+For any further information, please refer to the Fuel release plan [8].
 
 ## Installation 
 The installation process is the same of the previous releases. The OPS-Deploy installer is available at https://github.com/SmartInfrastructures/fuel-main-dev/releases. It is distributed as an ISO image, that can be installed  using a virtualization software package, such as VirtualBox, or on a bare-metal server.
 The first option is suggested only for testing scopes, whereas the second one is suggested for production environment.
 When installation is completed the system will be booted. Please pay attention to remove the installation media from the master node. Finally, by the browser you can visit the page http://10.20.0.2:8000 and log in using the admin credentials (by default they are admin/admin), whereas the default admin credentials for logging in the master node are root/r00tme. It is highly recommended to change the password after you log in (using the passwd command). 
 
-For any further information about the installation procedure,  please refer to the Fuel User Guide [8].
+For any further information about the installation procedure,  please refer to the Fuel User Guide [9].
 
 ### Prerequisites 
 
@@ -72,14 +71,14 @@ When this image is loaded, it reports the node's readiness and configuration to 
 ### Installation verification
 
 In order to verify the correct installation of the OPS-Deploy, the user can use the following command:
-*fuel --os-username admin --os-password admin release*
+*fuel release*
 
 The answer should be as follows:
 
 id | name                       | state     | operating_system | version
 ---|----------------------------|-----------|------------------|-------------
-1  | Icehouse on CentOS 6.5     | available | CentOS           | 2014.1.1-5.1
-2  | Icehouse on Ubuntu 12.04.4 | available | Ubuntu           | 2014.1.1-5.1
+1  | Juno on Ubuntu 14.04.1     | available | CentOS           | 2014.2.2-6.1
+2  | Juno on Ubuntu 14.04.1     | available | Ubuntu           | 2014.2.2-6.1
 
 
 ## Known issues
@@ -89,7 +88,7 @@ OPS-Deploy inherits some issues from Fuel 6.1. The main of them, are summarized 
 OPS-Deploy must be able to ping the default gateway in order to deploy the environment. If your configuration does not
 include a pingable default gateway, you can work around it by specifying the Fuel Master node (or any other
 pingable host) as the default gateway.
-Alternatively, you can apply  [Patch 138448](https://review.openstack.org/#/c/138448) to disable the requirement to ping the default gateway. After applying this patch, you need to enable it with following sequence of steps [7].
+Alternatively, you can apply  [Patch 138448](https://review.openstack.org/#/c/138448) to disable the requirement to ping the default gateway. After applying this patch, you need to enable it with following sequence of steps [8].
 
 ### Deassociate floating IP button may disappear from Horizon menu
 
@@ -98,7 +97,7 @@ topologies. You can, however, still use the Horizon UI to deassocciate IP addres
 then open Access&Security -> Floating IPs and deassociate the IP addresses here. See [Patch 1325575] (https://bugs.launchpad.net/bugs/1325575) .
 
 ## User manual
-The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/2.0/doc.
+The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/3.0/doc.
 
 ## License
 Apache License, Version 2.0, January 2004
@@ -111,16 +110,14 @@ Apache License, Version 2.0, January 2004
 
 [3] Puppet: https://puppetlabs.com/
 
-[4] Astute: https://docs.fuel-infra.org/fuel-dev/develop/env.html#astute
+[4] Nailgun: https://docs.fuel-infra.org/fuel-dev/develop/env.html#nailgun
 
-[5] Fuel Architecture: https://docs.fuel-infra.org/fuel-dev/develop/architecture.html
+[5] Astute: https://docs.fuel-infra.org/fuel-dev/develop/env.html#astute
 
-[6] Fuel by Mirantis 6.1: https://docs.mirantis.com/openstack/fuel/fuel-6.1/
+[6] Fuel Architecture: https://docs.fuel-infra.org/fuel-dev/develop/architecture.html
 
-[7] Fuel 6.1 release notes: https://docs.mirantis.com/openstack/fuel/fuel-6.1/release-notes.html#release-notes
+[7] Fuel by Mirantis 6.1: https://docs.mirantis.com/openstack/fuel/fuel-6.1/
 
-[8] Fuel 6.1 User guide: https://docs.mirantis.com/openstack/fuel/fuel-6.1/user-guide.html#user-guide
+[8] Fuel 6.1 release notes: https://docs.mirantis.com/openstack/fuel/fuel-6.1/release-notes.html#release-notes
 
-
-
-
+[9] Fuel 6.1 User guide: https://docs.mirantis.com/openstack/fuel/fuel-6.1/user-guide.html#user-guide
