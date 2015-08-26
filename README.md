@@ -13,7 +13,7 @@ For any feedbacks or bug reports, please use the the github issues tool.
 OPS-Deploy is a complex software composed by a set of Puppet [3] scripts, a task orchestrator (Nailgun [4]), a task executor (Astute [5]) and a UI. Its goal is to provide a deployment tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support a cloud infrastructure owner to set up a new node more quickly than a manual installation and as well building a more coherent and tested node within the FIWARE Lab federation.
 As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its architecture reflects the original structure. As follows, a brief description of the architecture is provided, but as usual for any detailed information, please refer to the Fuel official documentation [5].
 
-![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/3.0/doc/source/_static/OPS-Deploy_Architecture.jpg)
+![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/3.0/doc/source/_static/OPS-Deploy_Architecture_3.0.jpg)
 
 In OPS-Deploy several third-party components like Cobbler, Puppet, Mcollective live together to Fuel specific components (e.g. Astute) and FIWARE’s elements (e.g. monitoring GEs ).
 The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation as well to develop the installation scripts for each FIWARE component integrated.
