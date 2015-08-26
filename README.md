@@ -10,7 +10,7 @@ OPS-Deploy is used in FIWARE project in order to deploy a more coherent and test
 For any feedbacks or bug reports, please use the the github issues tool.
 
 ## Overall description
-OPS-Deploy is a complex software composed by a set of Puppet [3] scripts, a task orchestrator (Astute [4]) and a UI. Its goal is to provide a deployment tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support a cloud infrastructure owner to set up a new node more quickly than a manual installation and as well building a more coherent and tested node within the FIWARE Lab federation.
+OPS-Deploy is a complex software composed by a set of Puppet [3] scripts, a task orchestrator (Nailgun [4]), a task executor (Astute [5]) and a UI. Its goal is to provide a deployment tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support a cloud infrastructure owner to set up a new node more quickly than a manual installation and as well building a more coherent and tested node within the FIWARE Lab federation.
 As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its architecture reflects the original structure. As follows, a brief description of the architecture is provided, but as usual for any detailed information, please refer to the Fuel official documentation [5].
 
 ![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/2.0/doc/source/_static/OPS-Deploy_Architecture.jpg)
@@ -115,15 +115,17 @@ Apache License, Version 2.0, January 2004
 
 [3] Puppet: https://puppetlabs.com/
 
-[4] Astute: https://docs.fuel-infra.org/fuel-dev/develop/env.html#astute
+[4] Nailgun: https://docs.fuel-infra.org/fuel-dev/develop/env.html#nailgun
 
-[5] Fuel Architecture: https://docs.fuel-infra.org/fuel-dev/develop/architecture.html
+[5] Astute: https://docs.fuel-infra.org/fuel-dev/develop/env.html#astute
 
-[6] Fuel by Mirantis 5.1: https://docs.mirantis.com/openstack/fuel/fuel-5.1/
+[6] Fuel Architecture: https://docs.fuel-infra.org/fuel-dev/develop/architecture.html
 
-[7] Fuel 5.1.1 release notes: https://docs.mirantis.com/openstack/fuel/fuel-5.1/release-notes.html#release-notes
+[7] Fuel by Mirantis 5.1: https://docs.mirantis.com/openstack/fuel/fuel-5.1/
 
-[8] Fuel 5.1.1 User guide: https://docs.mirantis.com/openstack/fuel/fuel-5.1/user-guide.html
+[8] Fuel 5.1.1 release notes: https://docs.mirantis.com/openstack/fuel/fuel-5.1/release-notes.html#release-notes
+
+[9] Fuel 5.1.1 User guide: https://docs.mirantis.com/openstack/fuel/fuel-5.1/user-guide.html
 
 
 
