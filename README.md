@@ -99,11 +99,12 @@ include a pingable default gateway, you can work around it by specifying the Fue
 pingable host) as the default gateway.
 Alternatively, you can apply  [Patch 138448](https://review.openstack.org/#/c/138448) to disable the requirement to ping the default gateway. After applying this patch, you need to enable it with following sequence of steps [8].
 
-### Deassociate floating IP button may disappear from Horizon menu
+### Live migration
 
-The Deassociate floating IP button may disappear from the Horizon menu when using Neutron network
-topologies. You can, however, still use the Horizon UI to deassocciate IP addresses: navigate to the Project page,
-then open Access&Security -> Floating IPs and deassociate the IP addresses here. See [Patch 1325575] (https://bugs.launchpad.net/bugs/1325575) .
+Live migration with the specified destination host does not currently use the same memory oversubscription logic as during an instance boot. This may cause migrations to fail due to not enough amount of memory. See [LP1452009](https://bugs.launchpad.net/mos/7.0.x/+bug/1452009).
+
+### Ceph OSD on controller nodes
+Placing Ceph OSD on Controllers is not recommended because it can severely degrade controller's performance. It is better to use separate storage nodes if you have enough hardware.
 
 ## User manual
 The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/3.0/doc.
