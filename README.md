@@ -41,10 +41,10 @@ The previous monitoring components are now installed by plugins.
 Currently are available the following plugins:
 
 - [Calamari](https://github.com/SmartInfrastructures/fuel-plugin-calamari)
-- Nova-Docker
-- Openstack Data Collector
-- NGSI Adapter 1.1.1
-- Context Broker 0.13
+- [Nova-Docker](https://github.com/SmartInfrastructures/fuel-plugin-novadocker)
+- [Openstack Data Collector](https://github.com/SmartInfrastructures/fuel-plugin-openstack-data-collector)
+- [NGSI Adapter 1.1.1](https://github.com/SmartInfrastructures/fuel-plugin-ngsi-adapter)
+- [Context Broker 0.13](https://github.com/SmartInfrastructures/fuel-plugin-context-broker)
 
 For any further information, please refer to the Fuel release plan [8].
 
