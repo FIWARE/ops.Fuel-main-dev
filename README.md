@@ -40,7 +40,7 @@ The version 3.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis 
 The previous monitoring components are now installed by plugins. 
 Currently are available the following plugins:
 
-- ![Calamari]https://github.com/SmartInfrastructures/fuel-plugin-calamari
+- [Calamari](https://github.com/SmartInfrastructures/fuel-plugin-calamari)
 - Nova-Docker
 - Openstack Data Collector
 - NGSI Adapter 1.1.1
