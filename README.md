@@ -18,14 +18,21 @@ As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its ar
 In OPS-Deploy several third-party components like Cobbler, Puppet, Mcollective live together to Fuel specific components (e.g. Astute) and FIWARE’s elements (e.g. monitoring GEs ).
 The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation as well to develop the installation scripts for each FIWARE component integrated.
 
-Starting with release 3.0, OPS-Deploy supports a Pluggable architecture. This solution is inherited from Fuel version 6.1. It allows user to install and configure additional capabilities for your environment. According to this new architecture approach all the components previously developed, have been re-developed as a plugin.
+Starting with release 3.0, OPS-Deploy supports a pluggable architecture, inherited solution from Fuel version 6.1. It allows user to install and configure additional capabilities for your environment in a flexible, repeatable and reliable manner. According to this new architecture approach all the components previously developed, have been re-developed as a plugin.
+A plugin is composed by:
+- deployment_script directory: it contains a set of bash or puppet scripts
+- environment_config.yaml: the plugin UI fields. The will be showed into OPS-Deploy web UI (settings tab)
+- metadata.yaml: it contais name, version and compatibility for the plugin
+- repositories directory: it contains the list of CentOS and Ubuntu repositories 
+- task.yaml: it specifies when, where and how to run the installation scripts
 
-The user is able to interact with OPS-Deploy using both GUI and CLI. They interact with Nailgun which implements REST API as well as deployment data management. It manages disk volumes configuration data, networks configuration data and any other environment specific data which are necessary for successful deployment. Astute can be viewed as composed by Nailgun's workers. Each of them runs certain actions according to the instructions provided from Nailgun. Nailgun uses SQL database to store its data and AMQP service to interact with workers.
+As showed in Architecture diagram, througt the Plugin framework, the plugin is integrated into UI and it is activated by Nailgun. Furthermore, properly setting the task.yaml file, it is possible to coordinate the installation workflow of concurrent plugins.
 
-Cobbler is used as operating system provisioning service and DHCP service provider.
+Finally, in this release each plugin can only be installed before configuring and deploying the environment. Otherwise, the users should redeploy the environment to enable the plugin.
+
+In the same manner of the relase 2.x, the users are able to interact with OPS-Deploy using both GUI and CLI. They interact with Nailgun which implements REST API as well as deployment data management. It manages disk volumes configuration data, networks configuration data and any other environment specific data which are necessary for successful deployment. Astute can be viewed as composed by Nailgun's workers. Each of them runs certain actions according to the instructions provided from Nailgun. Nailgun uses SQL database to store its data and AMQP service to interact with workers whereas Cobbler is used as operating system provisioning service and DHCP service provider.
 
 Finally, Puppet is the deployment service and through MCollective agents are performed specific tasks like hard drives clearing, network connectivity probing on the discovered nodes.
-
 
 ### Features available
 The version 3.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 6.1 [7]. It installs OpenStack Juno release 2014.2.2 (2014.1.1-5.1) on Ubuntu 14.04.
@@ -52,15 +59,15 @@ For any further information about the installation procedure,  please refer to t
 
 For testing scope, the suggested minimum hardware requirements are:
 - Dual-core CPU
-- 2+ GB RAM
+- 4+ GB RAM
 - 1 gigabit network port
 - HDD 80 GB with dynamic disk expansion
 
 For a production environment, the suggested minimum hardware requirements are:
 - Quad-core CPU
-- 4+ GB RAM
+- 8+ GB RAM
 - 1 gigabit network port
-- HDD 256+ GB
+- HDD 512+ GB
 
 ### Network setup
 On the OPS-Deploy node (also named master node), the eth0 network interface is configured to reply to PXE requests. The default network is 10.20.0.2/24 and the gateway 10.20.0.1.
