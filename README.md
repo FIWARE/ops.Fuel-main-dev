@@ -106,6 +106,9 @@ Live migration with the specified destination host does not currently use the sa
 ### Ceph OSD on controller nodes
 Placing Ceph OSD on Controllers is not recommended because it can severely degrade controller's performance. It is better to use separate storage nodes if you have enough hardware.
 
+### RPC clients are not able to find a RabbitMQ queue
+RPC clients cannot find a reply queue after the last RabbitMQ server restarts in the cluster. See [Patch 1463802] (https://docs.mirantis.com/openstack/fuel/fuel-6.1/maintenance-updates.html#mos61mu-1463802)
+
 ## User manual
 The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/3.0/doc.
 
