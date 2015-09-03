@@ -54,7 +54,7 @@ The installation process is the same of the previous releases. The OPS-Deploy in
 The first option is suggested only for testing scopes, whereas the second one is suggested for production environment.
 When installation is completed the system will be booted. Please pay attention to remove the installation media from the master node. Finally, by the browser you can visit the page http://10.20.0.2:8000 and log in using the admin credentials (by default they are admin/admin), whereas the default admin credentials for logging in the master node are root/r00tme. It is highly recommended to change the password after you log in (using the passwd command). 
 
-For any further information about the installation procedure,  please refer to the Fuel User Guide [9].
+For any further information about the installation procedure, please refer to the Fuel User Guide [9].
 
 ### Prerequisites 
 
