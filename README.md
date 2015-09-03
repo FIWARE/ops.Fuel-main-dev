@@ -18,19 +18,20 @@ As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its ar
 In OPS-Deploy several third-party components like Cobbler, Puppet, Mcollective live together to Fuel specific components (e.g. Astute) and FIWARE’s elements (e.g. monitoring GEs ).
 The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation as well as to develop the installation scripts for each FIWARE component integrated.
 
-Starting with release 3.0, OPS-Deploy supports a pluggable architecture, inherited solution from Fuel version 6.1. It allows user to install and configure additional capabilities for your environment in a flexible, repeatable and reliable manner. According to this new architecture approach all the components previously developed, have been re-developed as a plugin.
-A plugin is composed by:
-- deployment_script directory: it contains a set of bash or puppet scripts
-- environment_config.yaml: the plugin UI fields. The will be showed into OPS-Deploy web UI (settings tab)
-- metadata.yaml: it contais name, version and compatibility for the plugin
-- repositories directory: it contains the list of CentOS and Ubuntu repositories 
-- task.yaml: it specifies when, where and how to run the installation scripts
+Starting with release 3.0, OPS-Deploy supports a pluggable architecture, inherited solution from Fuel version 6.1. It enables users to install and configure additional capabilities for their environments in a flexible, repeatable and reliable manner. According to this new architecture approach, all the components previously developed, have been re-developed as a plugin.
 
-As showed in Architecture diagram, througt the Plugin framework, the plugin is integrated into UI and it is activated by Nailgun. Furthermore, properly setting the task.yaml file, it is possible to coordinate the installation workflow of concurrent plugins.
+A plugin is composed by:
+- deployment_script directory: it contains a set of bash or puppet scripts;
+- environment_config.yaml: through  it, can be defined the plugin UI fields. They will be shown into OPS-Deploy web UI (settings tab);
+- metadata.yaml: it contains name, version and compatibility definition for the plugin;
+- repositories directory: it contains the list of CentOS and Ubuntu public repositories;
+- task.yaml: it specifies when, where and how to run the installation scripts.
+
+As shown in the Architecture diagram, through the Plugin framework, the plugin is integrated into UI and it is activated by Nailgun. Furthermore, properly setting the task.yaml file, it is possible to coordinate the workflow of concurrent plugin installations.
 
 Finally, in this release each plugin can only be installed before configuring and deploying the environment. Otherwise, the users should redeploy the environment to enable the plugin.
 
-In the same manner of the relase 2.x, the users are able to interact with OPS-Deploy using both GUI and CLI. They interact with Nailgun which implements REST API as well as deployment data management. It manages disk volumes configuration data, networks configuration data and any other environment specific data which are necessary for successful deployment. Astute can be viewed as composed by Nailgun's workers. Each of them runs certain actions according to the instructions provided from Nailgun. Nailgun uses SQL database to store its data and AMQP service to interact with workers whereas Cobbler is used as operating system provisioning service and DHCP service provider.
+In the same manner of the relase 2.x, the users are able to interact with OPS-Deploy using both GUI and CLI. They interact with Nailgun which implements REST API as well as deployment data management. It manages disk volumes configuration data, networks configuration data and any other environment specific data which are needed for finalize a deployment. Astute can be viewed as composed by Nailgun's workers. Each of them runs certain actions according to the instructions provided from Nailgun. Nailgun uses SQL database to store its data and AMQP service to interact with workers whereas Cobbler is used as operating system provisioning service and DHCP service provider.
 
 Finally, Puppet is the deployment service and through MCollective agents are performed specific tasks like hard drives clearing, network connectivity probing on the discovered nodes.
 
