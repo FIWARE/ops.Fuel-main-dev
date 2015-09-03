@@ -16,7 +16,7 @@ As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its ar
 ![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/2.0/doc/source/_static/OPS-Deploy_Architecture.jpg)
 
 In OPS-Deploy several third-party components like Cobbler, Puppet, Mcollective live together to Fuel specific components (e.g. Astute) and FIWARE’s elements (e.g. monitoring GEs ).
-The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation as well to develop the installation scripts for each FIWARE component integrated.
+The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation as well as to develop the installation scripts for each FIWARE component integrated.
 
 The user is able to interact with OPS-Deploy using both GUI and CLI. They interact with Nailgun which implements REST API as well as deployment data management. It manages disk volumes configuration data, networks configuration data and any other environment specific data which are necessary for successful deployment. Astute can be viewed as composed by Nailgun's workers. Each of them runs certain actions according to the instructions provided from Nailgun. Nailgun uses SQL database to store its data and AMQP service to interact with workers.
 
