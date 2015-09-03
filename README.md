@@ -16,7 +16,7 @@ As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its ar
 ![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/3.0/doc/source/_static/OPS-Deploy_Architecture_3.0.jpg)
 
 In OPS-Deploy several third-party components like Cobbler, Puppet, Mcollective live together to Fuel specific components (e.g. Astute) and FIWARE’s elements (e.g. monitoring GEs ).
-The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation as well to develop the installation scripts for each FIWARE component integrated.
+The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation as well as to develop the installation scripts for each FIWARE component integrated.
 
 Starting with release 3.0, OPS-Deploy supports a pluggable architecture, inherited solution from Fuel version 6.1. It allows user to install and configure additional capabilities for your environment in a flexible, repeatable and reliable manner. According to this new architecture approach all the components previously developed, have been re-developed as a plugin.
 A plugin is composed by:
