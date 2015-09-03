@@ -10,6 +10,6 @@ OPS-Deploy is used in FIWARE project in order to deploy a more coherent and test
 For any feedbacks or bug reports, please use the the github issues tool.
 
 ## Releases
-- 2.0 (OpenStack IceHouse): (https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/2.0)
-- 2.1 (OpenStack IceHouse): (https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/2.1)
-- 3.0 (OpenStack Kilo) : (https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/3.0)
+- 2.0 (OpenStack IceHouse): https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/2.0
+- 2.1 (OpenStack IceHouse): https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/2.1
+- 3.0 (OpenStack Kilo) : https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/3.0
