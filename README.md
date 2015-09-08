@@ -9,7 +9,7 @@ OPS-Deploy is used in FIWARE project in order to deploy a more coherent and test
 
 For any feedbacks or bug reports, please use the the github issues tool.
 
-## Overall description
+## Description
 OPS-Deploy is a complex software composed by a set of Puppet [3] scripts, a task orchestrator (Nailgun [4]), a task executor (Astute [5]) and a UI. Its goal is to provide a user friendly tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support a cloud infrastructure owner to set up a new node more quickly than a manual installation and as well as building a more coherent and tested node within the FIWARE Lab federation.
 As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its architecture reflects the original structure. An high level architecture diagram is provided below. For any detailed information, please refer to the Fuel official documentation [6].
 
@@ -35,7 +35,7 @@ In the same manner of the relase 2.x, the users are able to interact with OPS-De
 
 Finally, Puppet is the deployment service and through MCollective agents are performed specific tasks like hard drives clearing, network connectivity probing on the discovered nodes.
 
-### Features available
+## Features Implemented
 The version 3.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 6.1 [7]. It installs OpenStack Juno release 2014.2.2 (2014.1.1-5.1) on Ubuntu 14.04.
 
 The previous monitoring components are now installed by plugins. 
@@ -49,7 +49,7 @@ Currently are available the following plugins:
 
 For any further information, please refer to the Fuel release plan [8].
 
-## Installation 
+## Installation Manual 
 The installation process is the same of the previous releases. The OPS-Deploy installer is available at https://github.com/SmartInfrastructures/fuel-main-dev/releases. It is distributed as an ISO image, that can be installed  using a virtualization software package, such as VirtualBox, or on a bare-metal server.
 The first option is suggested only for testing scopes, whereas the second one is suggested for production environment.
 When installation is completed the system will be booted. Please pay attention to remove the installation media from the master node. Finally, by the browser you can visit the page http://10.20.0.2:8000 and log in using the admin credentials (by default they are admin/admin), whereas the default admin credentials for logging in the master node are root/r00tme. It is highly recommended to change the password after you log in (using the passwd command). 
@@ -78,7 +78,7 @@ Each node sends out DHCP discovery requests and gets the response from the OPS-D
 When a node receives the response from the OPS-Deploy node, it fetches the pxelinux bootloader and then the bootstrap image (CentOS based Linux in memory) from the OPS-Deploy node's TFTP server and boots into it.
 When this image is loaded, it reports the node's readiness and configuration to the master node. This could take a few minutes.
 
-### Installation verification
+## Installation Verification 
 
 In order to verify the correct installation of the OPS-Deploy, the user can use the following command:
 *fuel release*
@@ -90,6 +90,8 @@ id | name                       | state     | operating_system | version
 1  | Juno on Ubuntu 14.04.1     | available | CentOS           | 2014.2.2-6.1
 2  | Juno on Ubuntu 14.04.1     | available | Ubuntu           | 2014.2.2-6.1
 
+## User manual
+The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/3.0/doc.
 
 ## Known issues
 OPS-Deploy inherits some issues from Fuel 6.1. The main of them, are summarized below.
@@ -109,9 +111,6 @@ Placing Ceph OSD on Controllers is not recommended because it can severely degra
 
 ### RPC clients are not able to find a RabbitMQ queue
 RPC clients cannot find a reply queue after the last RabbitMQ server restarts in the cluster. See [Patch 1463802] (https://docs.mirantis.com/openstack/fuel/fuel-6.1/maintenance-updates.html#mos61mu-1463802)
-
-## User manual
-The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/3.0/doc.
 
 ## License
 Apache License, Version 2.0, January 2004
