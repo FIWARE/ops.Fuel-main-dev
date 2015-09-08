@@ -9,7 +9,7 @@ OPS-Deploy is used in FIWARE project in order to deploy a more coherent and test
 
 For any feedbacks or bug reports, please use the the github issues tool.
 
-## Overall description
+## Description
 OPS-Deploy is a complex software composed by a set of Puppet [3] scripts, a task orchestrator (Nailgun [4]), a task executor (Astute [5]) and a UI. Its goal is to provide a user friendly tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support a cloud infrastructure owner to set up a new node more quickly than a manual installation and as well as building a more coherent and tested node within the FIWARE Lab federation.
 As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its architecture reflects the original structure. An high level architecture diagram is provided below. For any detailed information, please refer to the Fuel official documentation [6].
 
@@ -25,7 +25,7 @@ Cobbler is used as operating system provisioning service and DHCP service provid
 Finally, Puppet is the deployment service and through MCollective agents are performed specific tasks like hard drives clearing, network connectivity probing on the discovered nodes.
 
 
-### Features available
+## Features Implemented
 The version 2.1 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 5.1 [7]. It installs the Icehouse 2014.1.3 release of OpenStack on Ubuntu 12.04.4 and the following monitoring modules:
 
 - Nagios 3.5.1
@@ -47,7 +47,7 @@ The monitoring node is installed whether in Multi-Node mode or in HA mode on a s
 
 For any further information, please refer to the Fuel release plan [8].
 
-## Installation 
+## Installation Manual 
 You can download the OPS-Deploy installer from https://github.com/SmartInfrastructures/fuel-main-dev/releases. It is distributed as an ISO image, that can be installed  using a virtualization software package, such as VirtualBox, or on a bare-metal server.
 The first option is suggested only for testing scopes, whereas the second one is suggested for production environment.
 When installation is completed the system will be booted. Please pay attention to remove the installation media from the master node. Finally, by the browser you can visit the page http://10.20.0.2:8000 and log in using the admin credentials (by default they are admin/admin), whereas the default admin credentials for logging in the master node are root/r00tme. It is highly recommended to change the password after you log in (using the passwd command). 
@@ -76,7 +76,7 @@ Each node sends out DHCP discovery requests and gets the response from the OPS-D
 When a node receives the response from the OPS-Deploy node, it fetches the pxelinux bootloader and then the bootstrap image (CentOS based Linux in memory) from the OPS-Deploy node's TFTP server and boots into it.
 When this image is loaded, it reports the node's readiness and configuration to the master node. This could take a few minutes.
 
-### Installation verification
+## Installation Verification
 
 In order to verify the correct installation of the OPS-Deploy, the user can use the following command:
 *fuel --os-username admin --os-password admin release*
@@ -88,6 +88,9 @@ id | name                       | state     | operating_system | version
 1  | Icehouse on CentOS 6.5     | available | CentOS           | 2014.1.1-5.1
 2  | Icehouse on Ubuntu 12.04.4 | available | Ubuntu           | 2014.1.1-5.1
 
+
+## User manual
+The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/2.1/doc.
 
 ## Known issues
 OPS-Deploy inherits some issues from Fuel 5.1.1. The main of them, are summarized below.
@@ -103,9 +106,6 @@ Alternatively, you can apply  [Patch 138448](https://review.openstack.org/#/c/13
 The Deassociate floating IP button may disappear from the Horizon menu when using Neutron network
 topologies. You can, however, still use the Horizon UI to deassocciate IP addresses: navigate to the Project page,
 then open Access&Security -> Floating IPs and deassociate the IP addresses here. See [Patch 1325575] (https://bugs.launchpad.net/bugs/1325575) .
-
-## User manual
-The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/2.1/doc.
 
 ## License
 Apache License, Version 2.0, January 2004
