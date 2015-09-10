@@ -93,6 +93,9 @@ id | name                       | state     | operating_system | version
 ## User manual
 The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/3.0/doc.
 
+## API Documentation
+Not applicable in this case.
+
 ## Known issues
 OPS-Deploy inherits some issues from Fuel 6.1. The main of them, are summarized below.
 
