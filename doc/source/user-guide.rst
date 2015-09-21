@@ -97,7 +97,7 @@ The "Settings" tab contains options useful to manage the current environment. He
 
 *Fig. 11: Infrastructure settings (Access, Additional Components)*
 
-.. image:: _static/OPS-Deploy-12png
+.. image:: _static/OPS-Deploy-12.png
      :alt: Infrastructure settings (Common)
      :scale: 75%
 
