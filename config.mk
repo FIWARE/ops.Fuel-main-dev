@@ -104,7 +104,7 @@ NO_UI_OPTIMIZE:=0
 
 # Repos and versions
 FUELLIB_COMMIT?=stable/7.0
-NAILGUN_COMMIT?=stable/7.0
+NAILGUN_COMMIT?=si/4.0
 PYTHON_FUELCLIENT_COMMIT?=stable/7.0
 FUEL_AGENT_COMMIT?=stable/7.0
 FUEL_NAILGUN_AGENT_COMMIT?=stable/7.0
@@ -112,7 +112,7 @@ ASTUTE_COMMIT?=stable/7.0
 OSTF_COMMIT?=stable/7.0
 
 FUELLIB_REPO?=https://github.com/openstack/fuel-library.git
-NAILGUN_REPO?=https://github.com/openstack/fuel-web.git
+NAILGUN_REPO?=https://github.com/SmartInfrastructures/fuel-web-dev.git
 PYTHON_FUELCLIENT_REPO?=https://github.com/openstack/python-fuelclient.git
 FUEL_AGENT_REPO?=https://github.com/openstack/fuel-agent.git
 FUEL_NAILGUN_AGENT_REPO?=https://github.com/openstack/fuel-nailgun-agent.git
