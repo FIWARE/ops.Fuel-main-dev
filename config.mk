@@ -117,13 +117,13 @@ endef
 
 # Repos and versions
 FUELLIB_COMMIT?=stable/6.1
-NAILGUN_COMMIT?=stable/6.1
+NAILGUN_COMMIT?=si/3.0
 PYTHON_FUELCLIENT_COMMIT?=stable/6.1
 ASTUTE_COMMIT?=stable/6.1
 OSTF_COMMIT?=stable/6.1
 
 FUELLIB_REPO?=https://github.com/stackforge/fuel-library.git
-NAILGUN_REPO?=https://github.com/stackforge/fuel-web.git
+NAILGUN_REPO?=https://github.com/SmartInfrastructures/fuel-web-dev.git
 PYTHON_FUELCLIENT_REPO?=https://github.com/stackforge/python-fuelclient.git
 ASTUTE_REPO?=https://github.com/stackforge/fuel-astute.git
 OSTF_REPO?=https://github.com/stackforge/fuel-ostf.git
