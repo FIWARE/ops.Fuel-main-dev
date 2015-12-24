@@ -13,7 +13,7 @@ For any feedbacks or bug reports, please use the the github issues tool.
 OPS-Deploy is a complex software composed by a set of Puppet [3] scripts, a task orchestrator (Nailgun [4]), a task executor (Astute [5]) and a UI. Its goal is to provide a user friendly tool for deploying a new FIWARE Lab node based on OpenStack. The tool has a double advantage: support a cloud infrastructure owner to set up a new node more quickly than a manual installation and as well as building a more coherent and tested node within the FIWARE Lab federation.
 As said previously, OPS-Deploy is based on Fuel by Mirantis and obviously its architecture reflects the original structure. An high level architecture diagram is provided below. For any detailed information, please refer to the Fuel official documentation [6].
 
-![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/3.0/doc/source/_static/OPS-Deploy_Architecture_3.0.jpg)
+![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/4.0/doc/source/_static/OPS-Deploy_Architecture_3.0.jpg)
 
 In OPS-Deploy several third-party components like Cobbler, Puppet, Mcollective live together to Fuel specific components (e.g. Astute) and FIWARE’s elements (e.g. monitoring GEs ).
 The original project has required some customizations or enhancements as adapt the GUI to FIWARE style guide or create the UI elements for enabling the monitoring components installation as well as to develop the installation scripts for each FIWARE component integrated.
@@ -36,7 +36,7 @@ In the same manner of the relase 2.x, the users are able to interact with OPS-De
 Finally, Puppet is the deployment service and through MCollective agents are performed specific tasks like hard drives clearing, network connectivity probing on the discovered nodes.
 
 ## Features Implemented
-The version 3.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 6.1 [7]. It installs OpenStack Juno release 2014.2.2 (2014.1.1-5.1) on Ubuntu 14.04.
+The version 4.0 of OPS-Deploy is based on the stable branch of Fuel by Mirantis version 7.0 [7]. It installs OpenStack Kilo release 2015.1.0-7.0 on Ubuntu 14.04.
 
 The previous monitoring components are now installed by plugins. 
 Currently are available the following plugins:
@@ -85,35 +85,22 @@ In order to verify the correct installation of the OPS-Deploy, the user can use 
 
 The answer should be as follows:
 
-id | name                       | state     | operating_system | version
----|----------------------------|-----------|------------------|-------------
-1  | Juno on Ubuntu 14.04.1     | available | CentOS           | 2014.2.2-6.1
-2  | Juno on Ubuntu 14.04.1     | available | Ubuntu           | 2014.2.2-6.1
+    id | name                 | state       | operating_system |  version
+    ---|----------------------|-------------|------------------|-------------
+    2  | Kilo on Ubuntu 14.04 | available   | Ubuntu           | 2015.1.0-7.0
+    1  | Kilo on CentOS 6.5   | unavailable | CentOS           | 2015.1.0-7.0
 
 ## User manual
-The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/3.0/doc.
+The user manual is available in the doc folder at https://github.com/SmartInfrastructures/fuel-main-dev/tree/si/4.0/doc.
 
 ## API Documentation
 Not applicable in this case.
 
 ## Known issues
-OPS-Deploy inherits some issues from Fuel 6.1. The main of them, are summarized below.
 
-### OPS-Deploy requires a pingable default gateway in order to deploy
-OPS-Deploy must be able to ping the default gateway in order to deploy the environment. If your configuration does not
-include a pingable default gateway, you can work around it by specifying the Fuel Master node (or any other
-pingable host) as the default gateway.
-Alternatively, you can apply  [Patch 138448](https://review.openstack.org/#/c/138448) to disable the requirement to ping the default gateway. After applying this patch, you need to enable it with following sequence of steps [8].
+OPS-Deploy inherits some issues from Fuel 7.0. See, the fuel resolved and known issues:
 
-### Live migration
-
-Live migration with the specified destination host does not currently use the same memory oversubscription logic as during an instance boot. This may cause migrations to fail due to not enough amount of memory. See [LP1452009](https://bugs.launchpad.net/mos/7.0.x/+bug/1452009).
-
-### Ceph OSD on controller nodes
-Placing Ceph OSD on Controllers is not recommended because it can severely degrade controller's performance. It is better to use separate storage nodes if you have enough hardware.
-
-### RPC clients are not able to find a RabbitMQ queue
-RPC clients cannot find a reply queue after the last RabbitMQ server restarts in the cluster. See [Patch 1463802] (https://docs.mirantis.com/openstack/fuel/fuel-6.1/maintenance-updates.html#mos61mu-1463802)
+https://docs.mirantis.com/openstack/fuel/fuel-7.0/release-notes.html#fuel-resolved-and-known-issues
 
 ## License
 Apache License, Version 2.0, January 2004
@@ -132,8 +119,8 @@ Apache License, Version 2.0, January 2004
 
 [6] Fuel Architecture: https://docs.fuel-infra.org/fuel-dev/develop/architecture.html
 
-[7] Fuel by Mirantis 6.1: https://docs.mirantis.com/openstack/fuel/fuel-6.1/
+[7] Fuel by Mirantis 7.0: https://docs.mirantis.com/openstack/fuel/fuel-7.0/
 
-[8] Fuel 6.1 release notes: https://docs.mirantis.com/openstack/fuel/fuel-6.1/release-notes.html#release-notes
+[8] Fuel 7.0 release notes: https://docs.mirantis.com/openstack/fuel/fuel-7.0/release-notes.html#release-notes
 
-[9] Fuel 6.1 User guide: https://docs.mirantis.com/openstack/fuel/fuel-6.1/user-guide.html#user-guide
+[9] Fuel 7.0 User guide: https://docs.mirantis.com/openstack/fuel/fuel-7.0/release-notes.html#release-notes
