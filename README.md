@@ -3,9 +3,9 @@
 This is the code repository for the OPS-Deploy, the management and
 deployment tool for FIWARE Lab nodes.
 
-This project is part of [FIWARE] [1].
+This project is part of [FIWARE][1].
 
-OPS-Deploy is an open source project, based on Fuel by Mirantis[2]
+OPS-Deploy is an open source project, based on Fuel by [Mirantis][2]
 and closely developed to the OpenStack community. It provides a web UI
 through that a cloud administrator can intuitively deploy and manage
 an OpenStack environment.
@@ -20,17 +20,18 @@ tool.
 
 ## Description
 
-OPS-Deploy is a complex software composed by a set of Puppet[3]
-scripts, a task orchestrator (Nailgun[4]), a task executor (Astute[5])
-and a UI. Its goal is to provide a user friendly tool for deploying a
-new FIWARE Lab node based on OpenStack. The tool has a double
-advantage: support a cloud infrastructure owner to set up a new node
-more quickly than a manual installation and as well as building a more
-coherent and tested node within the FIWARE Lab federation.  As said
-previously, OPS-Deploy is based on Fuel by Mirantis and obviously its
-architecture reflects the original structure. An high level
-architecture diagram is provided below. For any detailed information,
-please refer to the [Fuel official documentation][6].
+OPS-Deploy is a complex software composed by a set of
+[Puppet scripts][3], a task orchestrator ([Nailgun][4]), a task
+executor ([Astute][5]) and a UI. Its goal is to provide a user
+friendly tool for deploying a new FIWARE Lab node based on
+OpenStack. The tool has a double advantage: support a cloud
+infrastructure owner to set up a new node more quickly than a manual
+installation and as well as building a more coherent and tested node
+within the FIWARE Lab federation.  As said previously, OPS-Deploy is
+based on Fuel by Mirantis and obviously its architecture reflects the
+original structure. An high level architecture diagram is provided
+below. For any detailed information, please refer to the
+[Fuel official documentation][6].
 
 ![OPD-Deploy Architecture](https://github.com/SmartInfrastructures/fuel-main-dev/blob/si/4.0/doc/source/_static/OPS-Deploy_Architecture_3.0.jpg)
 
@@ -103,7 +104,7 @@ Currently are available the following plugins:
 - [NGSI Adapter 1.1.1](https://github.com/SmartInfrastructures/fuel-plugin-ngsi-adapter)
 - [Context Broker 0.13](https://github.com/SmartInfrastructures/fuel-plugin-context-broker)
 
-For any further information, please refer to the Fuel release plan [8].
+For any further information, please refer to the [Fuel release plan][8].
 
 ## Installation Manual 
 
@@ -200,18 +201,18 @@ Apache License, Version 2.0, January 2004
 
 [1]: <http://www.fiware.org/> "FIWARE"
 
-[2]: <http//fuel.mirantis.com/> "Fuel by Mirantis"
+[2]: <http://fuel.mirantis.com/> "Fuel by Mirantis"
 
-[3]: <https//puppetlabs.com/> "Puppet"
+[3]: <https://puppetlabs.com/> "Puppet"
 
-[4]: <https//docs.fuel-infra.org/fuel-dev/develop/env.html#nailgun> "Nailgun"
+[4]: <https://docs.fuel-infra.org/fuel-dev/develop/env.html#nailgun> "Nailgun"
 
-[5]: <https//docs.fuel-infra.org/fuel-dev/develop/env.html#astute> "Astute"
+[5]: <https://docs.fuel-infra.org/fuel-dev/develop/env.html#astute> "Astute"
 
-[6]: <https//docs.fuel-infra.org/fuel-dev/develop/architecture.html> "Fuel Architecture"
+[6]: <https://docs.fuel-infra.org/fuel-dev/develop/architecture.html> "Fuel Architecture"
 
-[7]: <https//docs.mirantis.com/openstack/fuel/fuel-7.0/> "Fuel by Mirantis 7.0"
+[7]: <https://docs.mirantis.com/openstack/fuel/fuel-7.0/> "Fuel by Mirantis 7.0"
 
-[8]: <https//docs.mirantis.com/openstack/fuel/fuel-7.0/release-notes.html#release-notes> "Fuel 7.0 release notes"
+[8]: <https://docs.mirantis.com/openstack/fuel/fuel-7.0/release-notes.html#release-notes> "Fuel 7.0 release notes"
 
-[9]: <https//docs.mirantis.com/openstack/fuel/fuel-7.0/release-notes.html#release-notes> "Fuel 7.0 User guide"
+[9]: <https://docs.mirantis.com/openstack/fuel/fuel-7.0/release-notes.html#release-notes> "Fuel 7.0 User guide"
