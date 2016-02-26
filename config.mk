@@ -128,7 +128,7 @@ FUEL_NAILGUN_AGENT_GERRIT_URL?=https://review.openstack.org/openstack/fuel-nailg
 ASTUTE_GERRIT_URL?=https://review.openstack.org/openstack/fuel-astute
 OSTF_GERRIT_URL?=https://review.openstack.org/openstack/fuel-ostf
 
-FUELLIB_GERRIT_COMMIT?=none
+FUELLIB_GERRIT_COMMIT?="refs/changes/98/249098/1 refs/changes/99/249099/1"
 NAILGUN_GERRIT_COMMIT?=none
 PYTHON_FUELCLIENT_GERRIT_COMMIT?=none
 FUEL_AGENT_GERRIT_COMMIT?=none
