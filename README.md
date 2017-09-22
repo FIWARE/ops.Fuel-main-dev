@@ -1,3 +1,5 @@
+**WARNING: SUPPORT FOR THIS PROJECT IS DOSCONTINUED AND THIS REPOSITORY IS NO MORE MAINTANED**
+
 # OPS-Deploy
 
 This is the code repository for the OPS-Deploy, the management and
